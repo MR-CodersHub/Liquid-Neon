@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Register | Liquid Neon Brewery</title>
+  <meta name="description" content="Sign in or register for your Liquid Club account. Access exclusive bottle locker perks, limited drops, and member rewards.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">LN</div>
+        Liquid<span>Neon</span>
+      </a>
+
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <a href="index.html" class="nav-link">Home ▾</a>
+          <ul class="nav-dropdown-menu">
+            <li class="nav-dropdown-item"><a href="index.html">Home 1 – General Services</a></li>
+            <li class="nav-dropdown-item"><a href="home-2.html">Home 2 – Niche Craft</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown-item"><a href="about.html" class="nav-link">About Us</a></li>
+        <li class="nav-dropdown">
+          <a href="services.html" class="nav-link">Services ▾</a>
+          <ul class="nav-dropdown-menu">
+            <li class="nav-dropdown-item"><a href="services.html">All Services</a></li>
+            <li class="nav-dropdown-item"><a href="service-details.html">Service Details</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown">
+          <a href="blog.html" class="nav-link">Blog ▾</a>
+          <ul class="nav-dropdown-menu">
+            <li class="nav-dropdown-item"><a href="blog.html">Blog Overview</a></li>
+            <li class="nav-dropdown-item"><a href="blog-details.html">Blog Article Details</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown">
+          <a href="pricing.html" class="nav-link active">Pages ▾</a>
+          <ul class="nav-dropdown-menu">
+            <li class="nav-dropdown-item"><a href="pricing.html">Pricing & Packages</a></li>
+            <li class="nav-dropdown-item"><a href="auth.html">Login / Register</a></li>
+            <li class="nav-dropdown-item"><a href="404.html">404 Error Page</a></li>
+            <li class="nav-dropdown-item"><a href="coming-soon.html">Coming Soon</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <button class="icon-btn theme-toggle" title="Toggle Theme">☀️</button>
+        <button class="icon-btn rtl-toggle" title="Toggle Direction">RTL</button>
+        <a href="contact.html" class="btn btn-primary btn-sm nav-btn-desktop">Visit Taproom</a>
+        <button class="icon-btn mobile-toggle" aria-label="Toggle Navigation">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="overlay"></div>
+  <div class="mobile-nav">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">LN</div>
+        Liquid<span>Neon</span>
+      </a>
+      <button class="icon-btn mobile-close">✕</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link">Home 1 – General</a></li>
+      <li><a href="home-2.html" class="mobile-nav-link">Home 2 – Niche Craft</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+      <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li><a href="service-details.html" class="mobile-nav-link">Service Details</a></li>
+      <li><a href="blog.html" class="mobile-nav-link">Blog</a></li>
+      <li><a href="blog-details.html" class="mobile-nav-link">Blog Details</a></li>
+      <li><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
+      <li><a href="auth.html" class="mobile-nav-link active">Login / Register</a></li>
+      <li><a href="404.html" class="mobile-nav-link">404 Page</a></li>
+      <li><a href="coming-soon.html" class="mobile-nav-link">Coming Soon</a></li>
+      <li><a href="maintenance.html" class="mobile-nav-link">Maintenance</a></li>
+      <li><a href="sitemap.html" class="mobile-nav-link">Sitemap</a></li>
+      <li><a href="terms.html" class="mobile-nav-link">Terms</a></li>
+      <li><a href="privacy.html" class="mobile-nav-link">Privacy</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- SECTION 1: AUTH HERO -->
+    <section style="padding-top: 8.5rem; padding-bottom: 3.5rem; background: var(--bg-surface); border-bottom: 1px solid var(--border-subtle);" class="text-center">
+      <div class="container">
+        <span class="tagline">Liquid Club Portal</span>
+        <h1 class="font-display">Member Login & <span class="text-accent">Account Registration</span></h1>
+        <p style="max-width: 600px; margin: 0 auto;">Sign in to your account or create a new profile to track your taproom rewards.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 2: LOGIN FORM -->
+    <section class="section" id="login-section">
+      <div class="container" style="max-width: 550px;">
+        <div class="card" style="padding: 2.5rem;">
+          <div class="section-header" style="margin-bottom: 1.8rem; text-align: center;">
+            <h2>Member Login</h2>
+            <p>Enter your credentials to access your account.</p>
+          </div>
+
+          <form id="loginForm" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="loginEmail">Email Address *</label>
+              <input type="email" id="loginEmail" class="form-control" placeholder="member@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="loginPass">Password *</label>
+              <input type="password" id="loginPass" class="form-control" placeholder="••••••••" required>
+            </div>
+
+            <div class="flex justify-between align-center" style="margin-bottom: 1.5rem; font-size: 0.88rem;">
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                <input type="checkbox"> Remember Me
+              </label>
+              <a href="#" style="color: var(--accent);" onclick="alert('Password reset link sent to your email.'); return false;">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Sign In To Account</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: REGISTER FORM -->
+    <section class="section section-dark" id="register-section">
+      <div class="container" style="max-width: 550px;">
+        <div class="card" style="padding: 2.5rem; border-color: var(--accent);">
+          <div class="section-header" style="margin-bottom: 1.8rem; text-align: center;">
+            <span class="tagline">New Member?</span>
+            <h2>Create A Free Account</h2>
+            <p>Join over 2,500 local craft beer enthusiasts.</p>
+          </div>
+
+          <form id="registerForm" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="regName">Full Name *</label>
+              <input type="text" id="regName" class="form-control" placeholder="e.g. Samantha Miller" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="regEmail">Email Address *</label>
+              <input type="email" id="regEmail" class="form-control" placeholder="samantha@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="beerPref">Favorite Beer Style</label>
+              <select id="beerPref" class="form-control">
+                <option value="hazy">Hazy / Juicy IPA</option>
+                <option value="stout">Imperial Stout / Porter</option>
+                <option value="sour">Wild Sour / Lambic</option>
+                <option value="lager">Crisp Pilsner / Kellerbier</option>
+                <option value="all">I Love All Styles!</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="regPass">Create Password *</label>
+              <input type="password" id="regPass" class="form-control" placeholder="At least 8 characters" required>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 1.5rem;">
+              <label style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.85rem; cursor: pointer;">
+                <input type="checkbox" required style="margin-top: 0.2rem;"> I agree to the <a href="terms.html">Terms of Service</a> & confirm I am 21+ years of age.
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Create My Account</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: BENEFITS OF AN ACCOUNT -->
+    <section class="section" id="account-benefits">
+      <div class="container">
+        <div class="section-header">
+          <span class="tagline">Why Register?</span>
+          <h2>Member Account Benefits</h2>
+          <p>Unlock perks every time you visit the taproom or purchase online growler fills.</p>
+        </div>
+
+        <div class="grid grid-4">
+          <div class="card text-center">
+            <div style="font-size: 2.5rem; margin-bottom: 0.8rem; color: var(--accent);">🎁</div>
+            <h4>Birthday Pint On Us</h4>
+            <p style="font-size: 0.88rem;">Free full pint of any tap on your birthday month.</p>
+          </div>
+
+          <div class="card text-center">
+            <div style="font-size: 2.5rem; margin-bottom: 0.8rem; color: var(--accent);">🚀</div>
+            <h4>Early Pilot Releases</h4>
+            <p style="font-size: 0.88rem;">24-hour priority reservation window on 5-barrel experimental drops.</p>
+          </div>
+
+          <div class="card text-center">
+            <div style="font-size: 2.5rem; margin-bottom: 0.8rem; color: var(--accent);">⭐</div>
+            <h4>Tasting History</h4>
+            <p style="font-size: 0.88rem;">Log your favorite beers and keep personal tasting notes.</p>
+          </div>
+
+          <div class="card text-center">
+            <div style="font-size: 2.5rem; margin-bottom: 0.8rem; color: var(--accent);">🏷️</div>
+            <h4>10% Merch Discount</h4>
+            <p style="font-size: 0.88rem;">10% off t-shirts, hoodies, hats, and glassware.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: ACCOUNT FEATURES PREVIEW -->
+    <section class="section section-dark" id="account-preview">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-media">
+            <div class="hero-img-wrapper">
+              <img src="assets/images/beer_flight.jpg" alt="Member Digital Locker Preview">
+            </div>
+          </div>
+          <div class="hero-content">
+            <span class="tagline">Digital Experience</span>
+            <h2>Your Personal Craft Dashboard</h2>
+            <p>Our intuitive account dashboard lets you manage growler refill subscriptions, check your bottle locker inventory, and view upcoming taproom events.</p>
+            <div class="grid grid-2 gap-2" style="margin-top: 1.5rem;">
+              <div class="card">
+                <strong style="color: var(--accent);">⚡ Express Tap Scan</strong>
+                <p style="font-size: 0.85rem;">Scan your digital QR card at the bar for instant member tab checkout.</p>
+              </div>
+              <div class="card">
+                <strong style="color: var(--accent);">📦 Bottle Locker Status</strong>
+                <p style="font-size: 0.85rem;">Track aging barrel stouts reserved in your personal oak locker.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: SUPPORT / CTA -->
+    <section class="section" id="auth-support" style="background: radial-gradient(circle at center, rgba(245, 158, 11, 0.12), var(--bg-surface)); text-align: center;">
+      <div class="container">
+        <span class="tagline">Need Account Assistance?</span>
+        <h2 style="font-size: clamp(2rem, 3.5vw, 3rem); margin-bottom: 1.2rem;">Have Questions About Your Membership?</h2>
+        <p style="max-width: 550px; margin: 0 auto 2rem auto;">Our taproom desk is happy to help resolve login issues or transfer your physical loyalty card.</p>
+        <div class="flex justify-center gap-3">
+          <a href="contact.html" class="btn btn-primary btn-lg">Contact Member Support</a>
+          <a href="pricing.html" class="btn btn-secondary btn-lg">View Membership Tiers</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-icon">LN</div>
+            Liquid<span>Neon</span>
+          </a>
+          <p>Local craft brewery & taproom creating bold, authentic small-batch beers for community gatherings.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1 – General</a></li>
+            <li><a href="home-2.html">Home 2 – Niche Craft</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="service-details.html">Service Details</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html">Brewery Blog</a></li>
+            <li><a href="blog-details.html">Blog Article</a></li>
+            <li><a href="pricing.html">Pricing & Tasting</a></li>
+            <li><a href="auth.html">Login / Register</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Taproom Hours</h4>
+          <p style="font-size: 0.88rem; margin-bottom: 0.5rem;">Mon - Thu: 4:00 PM – 10:00 PM</p>
+          <p style="font-size: 0.88rem; margin-bottom: 0.5rem;">Fri - Sat: 12:00 PM – 11:30 PM</p>
+          <p style="font-size: 0.88rem; margin-bottom: 1.2rem;">Sunday: 12:00 PM – 9:00 PM</p>
+          <form class="newsletter-form flex gap-1">
+            <input type="email" class="form-control" placeholder="Enter your email" required style="padding: 0.5rem 0.8rem; font-size: 0.85rem;">
+            <button type="submit" class="btn btn-primary btn-sm">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Liquid Neon Craft Brewery & Taproom. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a> | <a href="sitemap.html">Sitemap</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" title="Back to Top">↑</button>
+
+  <div class="modal" id="notificationModal">
+    <div class="modal-box">
+      <h3 id="modalTitle" style="margin-bottom: 1rem; color: var(--accent);">Notification</h3>
+      <p id="modalMessage" style="margin-bottom: 1.8rem;">Message content goes here.</p>
+      <button class="btn btn-primary btn-sm" id="modalCloseBtn">Close</button>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

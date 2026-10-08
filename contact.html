@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us & Taproom Hours | Liquid Neon Brewery</title>
+  <meta name="description" content="Visit the Liquid Neon Taproom or submit an enquiry for brewery tours, private events, wholesale beer orders, and table reservations.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">LN</div>
+        Liquid<span>Neon</span>
+      </a>
+
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <a href="index.html" class="nav-link">Home ▾</a>
+          <ul class="nav-dropdown-menu">
+            <li class="nav-dropdown-item"><a href="index.html">Home 1 – General Services</a></li>
+            <li class="nav-dropdown-item"><a href="home-2.html">Home 2 – Niche Craft</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown-item"><a href="about.html" class="nav-link">About Us</a></li>
+        <li class="nav-dropdown">
+          <a href="services.html" class="nav-link">Services ▾</a>
+          <ul class="nav-dropdown-menu">
+            <li class="nav-dropdown-item"><a href="services.html">All Services</a></li>
+            <li class="nav-dropdown-item"><a href="service-details.html">Service Details</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown">
+          <a href="blog.html" class="nav-link">Blog ▾</a>
+          <ul class="nav-dropdown-menu">
+            <li class="nav-dropdown-item"><a href="blog.html">Blog Overview</a></li>
+            <li class="nav-dropdown-item"><a href="blog-details.html">Blog Article Details</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown">
+          <a href="pricing.html" class="nav-link">Pages ▾</a>
+          <ul class="nav-dropdown-menu">
+            <li class="nav-dropdown-item"><a href="pricing.html">Pricing & Packages</a></li>
+            <li class="nav-dropdown-item"><a href="auth.html">Login / Register</a></li>
+            <li class="nav-dropdown-item"><a href="404.html">404 Error Page</a></li>
+            <li class="nav-dropdown-item"><a href="coming-soon.html">Coming Soon</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown-item"><a href="contact.html" class="nav-link active">Contact Us</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <button class="icon-btn theme-toggle" title="Toggle Theme">☀️</button>
+        <button class="icon-btn rtl-toggle" title="Toggle Direction">RTL</button>
+        <a href="contact.html" class="btn btn-primary btn-sm nav-btn-desktop">Visit Taproom</a>
+        <button class="icon-btn mobile-toggle" aria-label="Toggle Navigation">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="overlay"></div>
+  <div class="mobile-nav">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">LN</div>
+        Liquid<span>Neon</span>
+      </a>
+      <button class="icon-btn mobile-close">✕</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link">Home 1 – General</a></li>
+      <li><a href="home-2.html" class="mobile-nav-link">Home 2 – Niche Craft</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+      <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li><a href="service-details.html" class="mobile-nav-link">Service Details</a></li>
+      <li><a href="blog.html" class="mobile-nav-link">Blog</a></li>
+      <li><a href="blog-details.html" class="mobile-nav-link">Blog Details</a></li>
+      <li><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
+      <li><a href="auth.html" class="mobile-nav-link">Login / Register</a></li>
+      <li><a href="404.html" class="mobile-nav-link">404 Page</a></li>
+      <li><a href="coming-soon.html" class="mobile-nav-link">Coming Soon</a></li>
+      <li><a href="maintenance.html" class="mobile-nav-link">Maintenance</a></li>
+      <li><a href="sitemap.html" class="mobile-nav-link">Sitemap</a></li>
+      <li><a href="terms.html" class="mobile-nav-link">Terms</a></li>
+      <li><a href="privacy.html" class="mobile-nav-link">Privacy</a></li>
+      <li><a href="contact.html" class="mobile-nav-link active">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- SECTION 1: CONTACT HERO -->
+    <section style="padding-top: 8.5rem; padding-bottom: 3.5rem; background: var(--bg-surface); border-bottom: 1px solid var(--border-subtle);" class="text-center">
+      <div class="container">
+        <span class="tagline">Get In Touch</span>
+        <h1 class="font-display">Contact Us & <span class="text-accent">Taproom Reservations</span></h1>
+        <p style="max-width: 650px; margin: 0 auto;">Questions about private events, wholesale distribution, or reserving a large group table? We are here to help!</p>
+      </div>
+    </section>
+
+    <!-- SECTION 2: ENQUIRY FORM -->
+    <section class="section" id="enquiry-section">
+      <div class="container" style="max-width: 900px;">
+        <div class="card" style="padding: 2.8rem;">
+          <div class="section-header" style="margin-bottom: 2rem;">
+            <h2>Send Us An Enquiry</h2>
+            <p>Fill in the form below and our taproom management team will respond within 24 hours.</p>
+          </div>
+
+          <form id="enquiryForm" novalidate>
+            <div class="grid grid-2">
+              <div class="form-group">
+                <label class="form-label" for="fullName">Full Name *</label>
+                <input type="text" id="fullName" class="form-control" placeholder="e.g. Alexander Vance" required>
+                <div class="form-feedback">Please enter your full name.</div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="email">Email Address *</label>
+                <input type="email" id="email" class="form-control" placeholder="e.g. alex@example.com" required>
+                <div class="form-feedback">Please enter a valid email address.</div>
+              </div>
+            </div>
+
+            <div class="grid grid-2">
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone Number *</label>
+                <input type="tel" id="phone" class="form-control" placeholder="e.g. (555) 234-5678" required>
+                <div class="form-feedback">Please enter your phone number.</div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="enquiryType">Enquiry Type *</label>
+                <select id="enquiryType" class="form-control" required>
+                  <option value="">Select Enquiry Type...</option>
+                  <option value="general">General Enquiry</option>
+                  <option value="taproom">Taproom Visit / Table Reservation</option>
+                  <option value="private">Private Event / Party Buyout</option>
+                  <option value="tour">Brewery Guided Tour</option>
+                  <option value="wholesale">Beer / Wholesale Distribution</option>
+                  <option value="collaboration">Collaboration / Media</option>
+                </select>
+                <div class="form-feedback">Please select an enquiry type.</div>
+              </div>
+            </div>
+
+            <div class="grid grid-2">
+              <div class="form-group">
+                <label class="form-label" for="prefDate">Preferred Date</label>
+                <input type="date" id="prefDate" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="guests">Number of Guests</label>
+                <input type="number" id="guests" class="form-control" placeholder="e.g. 8" min="1" max="200">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="subject">Subject *</label>
+              <input type="text" id="subject" class="form-control" placeholder="Brief subject line" required>
+              <div class="form-feedback">Please provide a subject.</div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Message / Details *</label>
+              <textarea id="message" class="form-control" placeholder="Tell us about your event, table preferences, or questions..." required></textarea>
+              <div class="form-feedback">Please enter your message.</div>
+            </div>
+
+            <div class="text-center" style="margin-top: 2rem;">
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; max-width: 320px;">Submit Enquiry</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: TAPROOM INFORMATION -->
+    <section class="section section-dark" id="taproom-info">
+      <div class="container">
+        <div class="section-header">
+          <span class="tagline">Location & Contact</span>
+          <h2>Taproom Contact Details</h2>
+          <p>We are located in the heart of the Historic Brewery District.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card text-center">
+            <div style="font-size: 2.8rem; margin-bottom: 0.8rem; color: var(--accent);">📍</div>
+            <h3>Address</h3>
+            <p>420 Industrial Craft Parkway<br>Brewery District, City 90210</p>
+          </div>
+
+          <div class="card text-center">
+            <div style="font-size: 2.8rem; margin-bottom: 0.8rem; color: var(--accent);">📞</div>
+            <h3>Phone & Email</h3>
+            <p>Taproom: (555) 890-BEER<br>Email: cheers@liquidneonbrewery.com</p>
+          </div>
+
+          <div class="card text-center">
+            <div style="font-size: 2.8rem; margin-bottom: 0.8rem; color: var(--accent);">🚗</div>
+            <h3>Parking & Transit</h3>
+            <p>Free 40-Space Back Lot<br>2 Blocks from Central Light Rail</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: TAPROOM HOURS -->
+    <section class="section" id="taproom-hours">
+      <div class="container" style="max-width: 800px;">
+        <div class="section-header">
+          <span class="tagline">Opening Schedule</span>
+          <h2>Taproom Opening Hours</h2>
+          <p>Fresh pours served seven days a week.</p>
+        </div>
+
+        <div class="card" style="padding: 2.5rem;">
+          <div class="flex justify-between align-center" style="padding: 1rem 0; border-bottom: 1px dashed var(--border-subtle);">
+            <strong style="font-size: 1.1rem; color: var(--text-bright);">Monday – Thursday</strong>
+            <span class="badge">4:00 PM – 10:00 PM</span>
+          </div>
+
+          <div class="flex justify-between align-center" style="padding: 1rem 0; border-bottom: 1px dashed var(--border-subtle);">
+            <strong style="font-size: 1.1rem; color: var(--text-bright);">Friday & Saturday</strong>
+            <span class="badge badge-copper">12:00 PM – 11:30 PM</span>
+          </div>
+
+          <div class="flex justify-between align-center" style="padding: 1rem 0; border-bottom: 1px dashed var(--border-subtle);">
+            <strong style="font-size: 1.1rem; color: var(--text-bright);">Sunday</strong>
+            <span class="badge badge-green">12:00 PM – 9:00 PM</span>
+          </div>
+
+          <div class="flex justify-between align-center" style="padding: 1rem 0;">
+            <strong style="font-size: 1.1rem; color: var(--text-bright);">Holidays & Special Drops</strong>
+            <span style="font-size: 0.9rem; color: var(--accent);">Check Socials @LiquidNeonBrew</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: LOCATION / MAP AREA -->
+    <section class="section section-dark" id="map-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="tagline">Find Us Easily</span>
+          <h2>Brewery Map Location</h2>
+          <p>Located near Industrial Parkway & Craft Avenue.</p>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; box-shadow: var(--card-shadow);">
+          <!-- Stylized Dark Mode SVG Map Visualizer -->
+          <svg width="100%" height="100%" style="position: absolute; top:0; left:0; opacity: 0.3;">
+            <line x1="0" y1="200" x2="1000" y2="200" stroke="var(--amber-500)" stroke-width="8" />
+            <line x1="400" y1="0" x2="400" y2="600" stroke="var(--copper-500)" stroke-width="6" />
+            <circle cx="400" cy="200" r="15" fill="var(--amber-500)" />
+          </svg>
+          
+          <div style="z-index: 10; text-align: center; padding: 2rem; background: rgba(12, 11, 10, 0.85); border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+            <div style="font-size: 3rem; color: var(--accent); margin-bottom: 0.5rem;">📍</div>
+            <h3 style="margin-bottom: 0.5rem;">Liquid Neon Brewery & Taproom</h3>
+            <p style="margin-bottom: 1.2rem;">420 Industrial Craft Parkway, Brewery District</p>
+            <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Open in Google Maps ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: FAQ + FINAL CTA -->
+    <section class="section" id="contact-faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="tagline">Visitor FAQs</span>
+          <h2>Quick Answers For Guests</h2>
+        </div>
+
+        <div class="accordion" style="max-width: 800px; margin: 0 auto 3rem auto;">
+          <div class="accordion-item active">
+            <button class="accordion-header">
+              <span>Can I purchase kegs directly from the brewery?</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              <p>Yes! We offer 1/6 bbl and 1/2 bbl keg deposits for home kegerators and events. Select 'Beer / Wholesale Enquiry' in the form above.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>Do you offer non-alcoholic or gluten-reduced drinks?</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              <p>Yes, we tap locally brewed kombucha, artisan root beer, and offer 2 gluten-reduced lager options.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="services.html" class="btn btn-secondary">Explore Brewery Services</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-icon">LN</div>
+            Liquid<span>Neon</span>
+          </a>
+          <p>Local craft brewery & taproom creating bold, authentic small-batch beers for community gatherings.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1 – General</a></li>
+            <li><a href="home-2.html">Home 2 – Niche Craft</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="service-details.html">Service Details</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html">Brewery Blog</a></li>
+            <li><a href="blog-details.html">Blog Article</a></li>
+            <li><a href="pricing.html">Pricing & Tasting</a></li>
+            <li><a href="auth.html">Login / Register</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Taproom Hours</h4>
+          <p style="font-size: 0.88rem; margin-bottom: 0.5rem;">Mon - Thu: 4:00 PM – 10:00 PM</p>
+          <p style="font-size: 0.88rem; margin-bottom: 0.5rem;">Fri - Sat: 12:00 PM – 11:30 PM</p>
+          <p style="font-size: 0.88rem; margin-bottom: 1.2rem;">Sunday: 12:00 PM – 9:00 PM</p>
+          <form class="newsletter-form flex gap-1">
+            <input type="email" class="form-control" placeholder="Enter your email" required style="padding: 0.5rem 0.8rem; font-size: 0.85rem;">
+            <button type="submit" class="btn btn-primary btn-sm">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Liquid Neon Craft Brewery & Taproom. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a> | <a href="sitemap.html">Sitemap</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" title="Back to Top">↑</button>
+
+  <div class="modal" id="notificationModal">
+    <div class="modal-box">
+      <h3 id="modalTitle" style="margin-bottom: 1rem; color: var(--accent);">Notification</h3>
+      <p id="modalMessage" style="margin-bottom: 1.8rem;">Message content goes here.</p>
+      <button class="btn btn-primary btn-sm" id="modalCloseBtn">Close</button>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

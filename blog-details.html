@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Science of Dry-Hopping | Liquid Neon Brewery Blog</title>
+  <meta name="description" content="In-depth technical exploration of dry-hopping techniques, biotransformation yeast interactions, and hop oil solubility in Hazy IPAs.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">LN</div>
+        Liquid<span>Neon</span>
+      </a>
+
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <a href="index.html" class="nav-link">Home ▾</a>
+          <ul class="nav-dropdown-menu">
+            <li class="nav-dropdown-item"><a href="index.html">Home 1 – General Services</a></li>
+            <li class="nav-dropdown-item"><a href="home-2.html">Home 2 – Niche Craft</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown-item"><a href="about.html" class="nav-link">About Us</a></li>
+        <li class="nav-dropdown">
+          <a href="services.html" class="nav-link">Services ▾</a>
+          <ul class="nav-dropdown-menu">
+            <li class="nav-dropdown-item"><a href="services.html">All Services</a></li>
+            <li class="nav-dropdown-item"><a href="service-details.html">Service Details</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown">
+          <a href="blog.html" class="nav-link active">Blog ▾</a>
+          <ul class="nav-dropdown-menu">
+            <li class="nav-dropdown-item"><a href="blog.html">Blog Overview</a></li>
+            <li class="nav-dropdown-item"><a href="blog-details.html">Blog Article Details</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown">
+          <a href="pricing.html" class="nav-link">Pages ▾</a>
+          <ul class="nav-dropdown-menu">
+            <li class="nav-dropdown-item"><a href="pricing.html">Pricing & Packages</a></li>
+            <li class="nav-dropdown-item"><a href="auth.html">Login / Register</a></li>
+            <li class="nav-dropdown-item"><a href="404.html">404 Error Page</a></li>
+            <li class="nav-dropdown-item"><a href="coming-soon.html">Coming Soon</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <button class="icon-btn theme-toggle" title="Toggle Theme">☀️</button>
+        <button class="icon-btn rtl-toggle" title="Toggle Direction">RTL</button>
+        <a href="contact.html" class="btn btn-primary btn-sm nav-btn-desktop">Visit Taproom</a>
+        <button class="icon-btn mobile-toggle" aria-label="Toggle Navigation">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="overlay"></div>
+  <div class="mobile-nav">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">LN</div>
+        Liquid<span>Neon</span>
+      </a>
+      <button class="icon-btn mobile-close">✕</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link">Home 1 – General</a></li>
+      <li><a href="home-2.html" class="mobile-nav-link">Home 2 – Niche Craft</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+      <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li><a href="service-details.html" class="mobile-nav-link">Service Details</a></li>
+      <li><a href="blog.html" class="mobile-nav-link">Blog</a></li>
+      <li><a href="blog-details.html" class="mobile-nav-link active">Blog Details</a></li>
+      <li><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
+      <li><a href="auth.html" class="mobile-nav-link">Login / Register</a></li>
+      <li><a href="404.html" class="mobile-nav-link">404 Page</a></li>
+      <li><a href="coming-soon.html" class="mobile-nav-link">Coming Soon</a></li>
+      <li><a href="maintenance.html" class="mobile-nav-link">Maintenance</a></li>
+      <li><a href="sitemap.html" class="mobile-nav-link">Sitemap</a></li>
+      <li><a href="terms.html" class="mobile-nav-link">Terms</a></li>
+      <li><a href="privacy.html" class="mobile-nav-link">Privacy</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- SECTION 1: ARTICLE HERO -->
+    <section class="hero" id="article-hero">
+      <div class="container" style="max-width: 900px;">
+        <div style="margin-bottom: 1.5rem;">
+          <a href="blog.html" style="font-size: 0.88rem; font-weight: 700; color: var(--accent);">← Back to All Articles</a>
+        </div>
+        <div class="flex gap-2 align-center" style="margin-bottom: 1rem; flex-wrap: wrap;">
+          <span class="badge badge-copper">Hop Science</span>
+          <span style="font-size: 0.88rem; color: var(--text-muted);">Published: Oct 4, 2026</span>
+          <span style="font-size: 0.88rem; color: var(--text-muted);">• 6 Min Read</span>
+          <span style="font-size: 0.88rem; color: var(--text-muted);">• By Head Brewer Marcus Vance</span>
+        </div>
+        <h1 class="font-display" style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1.5rem; line-height: 1.1;">
+          The Science of Dry-Hopping: Unlocking <span class="text-accent">Hazy IPA Aromas</span>
+        </h1>
+      </div>
+    </section>
+
+    <!-- SECTION 2: ARTICLE INTRO -->
+    <section class="section" id="article-intro" style="padding-top: 0;">
+      <div class="container" style="max-width: 850px;">
+        <div class="hero-img-wrapper" style="margin-bottom: 2.5rem;">
+          <img src="assets/images/brewer_working.jpg" alt="Master Brewer Inspecting Fresh Hops for Dry Hopping">
+        </div>
+
+        <div style="background: var(--bg-surface); border-left: 4px solid var(--accent); padding: 1.8rem; border-radius: 0 var(--radius-md) var(--radius-md) 0; margin-bottom: 2rem;">
+          <p style="font-size: 1.15rem; color: var(--text-bright); font-style: italic; margin-bottom: 0;">
+            "Dry-hopping is not merely throwing hop pellets into a cold tank. It is an intricate biochemical reaction where yeast enzymes transform non-aromatic glycosides into explosive fruit terpenes."
+          </p>
+        </div>
+
+        <p style="font-size: 1.1rem; line-height: 1.8;">
+          When craft beer fans lift a glass of juicy Hazy IPA to their nose, they are greeted by an unmistakable blast of ripe passionfruit, crushed guava, and bright pink grapefruit. But where do these aromatics originate? Unlike traditional boiling hops that contribute bitterness, dry-hopping extracts volatile essential oils without adding harsh alpha-acid bitterness.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 3: MAIN ARTICLE CONTENT -->
+    <section class="section section-dark" id="article-content">
+      <div class="container" style="max-width: 850px;">
+        <h2 style="margin-bottom: 1.2rem; color: var(--text-bright);">1. Biotransformation: The Yeast Connection</h2>
+        <p>
+          During active primary fermentation, yeast cells produce beta-glucosidase enzymes. When hop pellets are introduced during late active fermentation (day 3 to 5), these enzymes break open sugar-bound glycosides present in hop lupulin glands. This releases free monoterpenes such as linalool and geraniol, turning herbal raw hops into sweet mango and papaya aromas.
+        </p>
+
+        <h2 style="margin-top: 2.5rem; margin-bottom: 1.2rem; color: var(--text-bright);">2. Temperature Thresholds: 60°F vs 68°F</h2>
+        <p>
+          At Liquid Neon, our cellar team conducted extensive trial batches to pinpoint the exact extraction kinetics of Citra and Mosaic hops. We discovered that dry-hopping at 65°F for exactly 72 hours achieves maximum oil saturation while avoiding vegetal "hop creep" caused by enzyme re-fermentation.
+        </p>
+
+        <ul style="margin: 1.5rem 0 2rem 2rem; color: var(--text-main);">
+          <li style="margin-bottom: 0.5rem;"><strong>Myrcene Oils:</strong> Responsible for resinous pine and citrus punch. Highly volatile.</li>
+          <li style="margin-bottom: 0.5rem;"><strong>Humulene:</strong> Elegant noble herbal notes, best extracted at cool temperatures.</li>
+          <li style="margin-bottom: 0.5rem;"><strong>Thiols (3MH & 3MHA):</strong> Tropical passionfruit compounds found in Nelson Sauvin and Galaxy hops.</li>
+        </ul>
+
+        <p>
+          By recirculating the hop bed using pressurized carbon dioxide bursts, we double hop contact without exposing raw beer to damaging oxygen ingress.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 4: BREWING / BEER VISUAL STORY -->
+    <section class="section" id="visual-story">
+      <div class="container">
+        <div class="section-header">
+          <span class="tagline">Cellar Photography</span>
+          <h2>The Dry-Hopping Visual Journey</h2>
+          <p>A peek inside our fermentation room during a fresh 20-barrel Hazy IPA dry-hop drop.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="hero-img-wrapper" style="height: 280px;">
+            <img src="assets/images/brewer_working.jpg" alt="Malt and hop inspection">
+          </div>
+          <div class="hero-img-wrapper" style="height: 280px;">
+            <img src="assets/images/tap_pouring.jpg" alt="Freshly dry hopped pour">
+          </div>
+          <div class="hero-img-wrapper" style="height: 280px;">
+            <img src="assets/images/beer_flight.jpg" alt="Tasting paddle sensory evaluation">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: RELATED ARTICLES -->
+    <section class="section section-dark" id="related-articles">
+      <div class="container">
+        <div class="section-header">
+          <span class="tagline">Keep Reading</span>
+          <h2>Related Brewing Stories</h2>
+          <p>Explore more articles written by our brewing staff.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card">
+            <span class="badge badge-green" style="margin-bottom: 0.8rem;">Yeast Lab</span>
+            <h3><a href="blog.html">Wild Kveik Yeast Fermentation</a></h3>
+            <p style="font-size: 0.88rem;">How Norwegian farmhouse yeast ferments clean at extreme high temperatures.</p>
+          </div>
+
+          <div class="card">
+            <span class="badge badge-copper" style="margin-bottom: 0.8rem;">Barrel Room</span>
+            <h3><a href="blog.html">Demystifying Barrel-Aged Stouts</a></h3>
+            <p style="font-size: 0.88rem;">Exploring 12-month Kentucky bourbon cask wood tannin maturation.</p>
+          </div>
+
+          <div class="card">
+            <span class="badge" style="margin-bottom: 0.8rem;">Taproom Life</span>
+            <h3><a href="blog.html">Building An Unplugged Stage</a></h3>
+            <p style="font-size: 0.88rem;">Crafting acoustic timber stage walls for community live sessions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: NEWSLETTER / TAPROOM CTA -->
+    <section class="section" id="article-cta" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), var(--bg-surface)); text-align: center;">
+      <div class="container">
+        <span class="tagline">Taste The Science</span>
+        <h2 style="font-size: clamp(2rem, 4vw, 3.2rem); margin-bottom: 1.2rem;">Want To Taste Our Latest Dry-Hopped Hazy IPA?</h2>
+        <p style="max-width: 600px; margin: 0 auto 2rem auto; font-size: 1.05rem;">
+          Neon Haze is currently flowing fresh from Tap #3 in our taproom. Stop by today for a pour or growler fill!
+        </p>
+        <div class="flex justify-center gap-3">
+          <a href="contact.html" class="btn btn-primary btn-lg">Visit Taproom</a>
+          <a href="services.html" class="btn btn-secondary btn-lg">View All Services</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-icon">LN</div>
+            Liquid<span>Neon</span>
+          </a>
+          <p>Local craft brewery & taproom creating bold, authentic small-batch beers for community gatherings.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1 – General</a></li>
+            <li><a href="home-2.html">Home 2 – Niche Craft</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="service-details.html">Service Details</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html">Brewery Blog</a></li>
+            <li><a href="blog-details.html">Blog Article</a></li>
+            <li><a href="pricing.html">Pricing & Tasting</a></li>
+            <li><a href="auth.html">Login / Register</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Taproom Hours</h4>
+          <p style="font-size: 0.88rem; margin-bottom: 0.5rem;">Mon - Thu: 4:00 PM – 10:00 PM</p>
+          <p style="font-size: 0.88rem; margin-bottom: 0.5rem;">Fri - Sat: 12:00 PM – 11:30 PM</p>
+          <p style="font-size: 0.88rem; margin-bottom: 1.2rem;">Sunday: 12:00 PM – 9:00 PM</p>
+          <form class="newsletter-form flex gap-1">
+            <input type="email" class="form-control" placeholder="Enter your email" required style="padding: 0.5rem 0.8rem; font-size: 0.85rem;">
+            <button type="submit" class="btn btn-primary btn-sm">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Liquid Neon Craft Brewery & Taproom. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a> | <a href="sitemap.html">Sitemap</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" title="Back to Top">↑</button>
+
+  <div class="modal" id="notificationModal">
+    <div class="modal-box">
+      <h3 id="modalTitle" style="margin-bottom: 1rem; color: var(--accent);">Notification</h3>
+      <p id="modalMessage" style="margin-bottom: 1.8rem;">Message content goes here.</p>
+      <button class="btn btn-primary btn-sm" id="modalCloseBtn">Close</button>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
