@@ -1502,17 +1502,23 @@ h4 .icon {
   margin-inline-start: 0.35em;
 }
 
-/* Responsive Breakpoints */
+/* Responsive Breakpoints — Home 1 + site-wide (320 / 360 / 480 / 760 / 1024) */
 @media (max-width: 1024px) {
   .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .hero-img-wrapper img { height: 380px; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
+  .grid-4 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 }
 
 @media (max-width: 768px) {
   .nav-links, .nav-btn-desktop { display: none; }
   .mobile-toggle { display: flex; }
+  .hero { padding-top: 7.5rem; padding-bottom: 4rem; }
   .section { padding-top: 4rem; padding-bottom: 4rem; }
+  .hero-img-wrapper img { height: 300px; }
+  .hero-badge-floating { left: 0.75rem; right: 0.75rem; bottom: -18px; padding: 0.85rem 1rem; }
+  .grid-3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
   .timeline::before { left: 20px; }
   [dir="rtl"] .timeline::before { right: 20px; left: auto; }
   .timeline-item { width: 100%; padding-left: 3.5rem; text-align: left !important; }
@@ -1524,12 +1530,63 @@ h4 .icon {
   .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
   .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
   .pricing-card.popular { transform: none; }
+  .price-amount { font-size: 2.6rem; }
+  #featured-story .featured-media { height: 260px; }
 }
 
 @media (max-width: 480px) {
-  .brand-tagline { display: none; }
-  .stats-grid { grid-template-columns: 1fr; }
+  .brand-tagline { font-size: 0.5rem; letter-spacing: 0.14em; }
+  .container { padding-left: 1.1rem; padding-right: 1.1rem; }
+  .hero { padding-top: 7rem; }
+  .hero-grid { gap: 2rem; }
+  .section-header { margin-bottom: 2.5rem; }
+  .hero-img-wrapper img { height: 240px; }
+  .hero-badge-floating { position: static; margin-top: 1rem; }
+  .stats-grid { grid-template-columns: 1fr; gap: 1.2rem; }
+  .stat-number { font-size: 2.4rem; }
   .hero-buttons { flex-direction: column; width: 100%; }
   .hero-buttons .btn { width: 100%; }
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; gap: 1.25rem; }
+  .pricing-card { padding: 1.6rem; }
+  .btn-lg { padding: 0.95rem 1.4rem; font-size: 0.95rem; white-space: normal; text-align: center; }
+  .flex.justify-center.gap-3 { flex-wrap: wrap; }
+  .flex.justify-center.gap-3 .btn { width: 100%; }
+  .newsletter-form.flex { flex-wrap: wrap; }
+  .newsletter-form .form-control { flex: 1 1 160px; }
   .beer-filter-btn { width: auto; flex: 1 1 auto; }
+  #featured-story .featured-media { height: 200px; }
+}
+
+@media (max-width: 360px) {
+  .container { padding-left: 0.9rem; padding-right: 0.9rem; }
+  .brand-logo { font-size: 1.35rem; }
+  .brand-tagline { font-size: 0.45rem; letter-spacing: 0.1em; }
+  .brand-icon { width: 32px; height: 32px; }
+  .brand-icon svg { width: 20px; height: 20px; }
+  .nav-controls { gap: 0.5rem; }
+  .icon-btn { width: 34px; height: 34px; }
+  .rtl-toggle { font-size: 0.7rem; }
+  .section { padding-top: 3.25rem; padding-bottom: 3.25rem; }
+  .hero { padding-top: 6.5rem; }
+  h1, .h1 { font-size: 2.2rem; }
+  .hero-content p { font-size: 1rem; }
+  .hero-img-wrapper img { height: 200px; }
+  .beer-card-img { height: 200px; }
+  .pricing-card { padding: 1.4rem; }
+  .price-amount { font-size: 2.4rem; }
+  .stat-number { font-size: 2.1rem; }
+  .btn { padding: 0.8rem 1.2rem; font-size: 0.88rem; }
+  .back-to-top { bottom: 1rem; right: 1rem; width: 40px; height: 40px; }
+  [dir="rtl"] .back-to-top { left: 1rem; }
+  .modal-box { padding: 1.6rem; }
+}
+
+@media (max-width: 320px) {
+  .container { padding-left: 0.8rem; padding-right: 0.8rem; }
+  .hero-img-wrapper img { height: 180px; }
+  .beer-card-img { height: 180px; }
+  h1, .h1 { font-size: 2rem; }
+  h2, .h2 { font-size: 1.7rem; }
+  .btn { white-space: normal; text-align: center; }
+  .footer-grid { gap: 1.5rem; }
 }
