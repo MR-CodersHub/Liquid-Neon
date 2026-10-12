@@ -1168,6 +1168,10 @@ textarea.form-control {
   resize: vertical;
   min-height: 120px;
 }
+/* Let newsletter inputs shrink inside flex rows (prevents overflow) */
+.newsletter-form .form-control {
+  min-width: 0;
+}
 .form-feedback {
   font-size: 0.8rem;
   margin-top: 0.35rem;
@@ -1532,6 +1536,9 @@ h4 .icon {
   .pricing-card.popular { transform: none; }
   .price-amount { font-size: 2.6rem; }
   #featured-story .featured-media { height: 260px; }
+  .newsletter-form.flex { flex-wrap: wrap; }
+  .newsletter-form .form-control { flex: 1 1 100%; }
+  .newsletter-form .btn { flex: 1 1 100%; width: 100%; }
 }
 
 @media (max-width: 480px) {
@@ -1551,8 +1558,6 @@ h4 .icon {
   .btn-lg { padding: 0.95rem 1.4rem; font-size: 0.95rem; white-space: normal; text-align: center; }
   .flex.justify-center.gap-3 { flex-wrap: wrap; }
   .flex.justify-center.gap-3 .btn { width: 100%; }
-  .newsletter-form.flex { flex-wrap: wrap; }
-  .newsletter-form .form-control { flex: 1 1 160px; }
   .beer-filter-btn { width: auto; flex: 1 1 auto; }
   #featured-story .featured-media { height: 200px; }
 }
