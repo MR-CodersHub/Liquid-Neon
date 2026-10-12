@@ -1197,6 +1197,53 @@ textarea.form-control {
   background: radial-gradient(circle at top right, rgba(245, 158, 11, 0.1), var(--bg-card));
   transform: scale(1.03);
 }
+/* Equal-height pricing / package cards + bottom-aligned CTA buttons */
+#tasting-options .grid,
+#experience-packages .grid,
+#private-event-packages .grid,
+#liquid-club .grid {
+  align-items: stretch;
+}
+.pricing-card {
+  height: 100%;
+}
+.pricing-card .pricing-features,
+#liquid-club .card .pricing-features {
+  flex: 1 1 auto;
+}
+#experience-packages .card,
+#liquid-club .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+#experience-packages .card h3,
+#liquid-club .card h3 {
+  min-height: 2.6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+#experience-packages .card p {
+  flex: 1 1 auto;
+}
+.pricing-card .btn,
+#experience-packages .card .btn,
+#liquid-club .card .btn {
+  margin-top: auto !important;
+  align-self: stretch;
+  text-align: center;
+}
+#experience-packages .card .btn.btn-sm,
+#liquid-club .card .btn.btn-sm {
+  align-self: center;
+}
+.badge-spacer {
+  visibility: hidden;
+  pointer-events: none;
+}
 .pricing-badge {
   position: absolute;
   top: -12px;

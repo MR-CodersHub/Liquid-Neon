@@ -68,18 +68,18 @@
 
   <main>
     <!-- SECTION 1: ARTICLE HERO -->
-    <section class="hero" id="article-hero">
+    <section class="hero" id="article-hero" style="background: linear-gradient(rgba(11,10,9,0.85), rgba(11,10,9,0.75)), url('https://i.pinimg.com/1200x/c6/23/ef/c623ef0df5bd57c3aa5959632eb8e42e.jpg') center / cover no-repeat;">
       <div class="container" style="max-width: 900px;">
         <div style="margin-bottom: 1.5rem;">
           <a href="blog.html" style="font-size: 0.88rem; font-weight: 700; color: var(--accent);"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to All Articles</a>
         </div>
         <div class="flex gap-2 align-center" style="margin-bottom: 1rem; flex-wrap: wrap;">
-          <span class="badge badge-copper">Hop Science</span>
-          <span style="font-size: 0.88rem; color: var(--text-muted);">Published: Oct 4, 2026</span>
-          <span style="font-size: 0.88rem; color: var(--text-muted);">• 6 Min Read</span>
-          <span style="font-size: 0.88rem; color: var(--text-muted);">• By Head Brewer Marcus Vance</span>
+          <span class="badge badge-copper" id="postBadge">Hop Science</span>
+          <span style="font-size: 0.88rem; color: var(--text-muted);" id="postDate">Published: Oct 4, 2026</span>
+          <span style="font-size: 0.88rem; color: var(--text-muted);" id="postRead">• 6 Min Read</span>
+          <span style="font-size: 0.88rem; color: var(--text-muted);" id="postAuthor">• By Head Brewer Marcus Vance</span>
         </div>
-        <h1 class="font-display" style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1.5rem; line-height: 1.1;">
+        <h1 class="font-display" id="postTitle" style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1.5rem; line-height: 1.1;">
           The Science of Dry-Hopping: Unlocking <span class="text-accent">Hazy IPA Aromas</span>
         </h1>
       </div>
@@ -89,16 +89,16 @@
     <section class="section" id="article-intro" style="padding-top: 0;">
       <div class="container" style="max-width: 850px;">
         <div class="hero-img-wrapper" style="margin-bottom: 2.5rem;">
-          <img src="../assets/images/blog-dry-hopping.jpg" alt="The Science of Dry-Hopping Hazy IPA">
+          <img id="postImage" src="../assets/images/blog-dry-hopping.jpg" alt="The Science of Dry-Hopping Hazy IPA">
         </div>
 
         <div style="background: var(--bg-surface); border-left: 4px solid var(--accent); padding: 1.8rem; border-radius: 0 var(--radius-md) var(--radius-md) 0; margin-bottom: 2rem;">
-          <p style="font-size: 1.15rem; color: var(--text-bright); font-style: italic; margin-bottom: 0;">
+          <p id="postQuote" style="font-size: 1.15rem; color: var(--text-bright); font-style: italic; margin-bottom: 0;">
             "Dry-hopping is not merely throwing hop pellets into a cold tank. It is an intricate biochemical reaction where yeast enzymes transform non-aromatic glycosides into explosive fruit terpenes."
           </p>
         </div>
 
-        <p style="font-size: 1.1rem; line-height: 1.8;">
+        <p id="postIntro" style="font-size: 1.1rem; line-height: 1.8;">
           When craft beer fans lift a glass of juicy Hazy IPA to their nose, they are greeted by an unmistakable blast of ripe passionfruit, crushed guava, and bright pink grapefruit. But where do these aromatics originate? Unlike traditional boiling hops that contribute bitterness, dry-hopping extracts volatile essential oils without adding harsh alpha-acid bitterness.
         </p>
       </div>
@@ -107,23 +107,23 @@
     <!-- SECTION 3: MAIN ARTICLE CONTENT -->
     <section class="section section-dark" id="article-content">
       <div class="container" style="max-width: 850px;">
-        <h2 style="margin-bottom: 1.2rem; color: var(--text-bright);">1. Biotransformation: The Yeast Connection</h2>
-        <p>
+        <h2 id="postH1" style="margin-bottom: 1.2rem; color: var(--text-bright);">1. Biotransformation: The Yeast Connection</h2>
+        <p id="postP1">
           During active primary fermentation, yeast cells produce beta-glucosidase enzymes. When hop pellets are introduced during late active fermentation (day 3 to 5), these enzymes break open sugar-bound glycosides present in hop lupulin glands. This releases free monoterpenes such as linalool and geraniol, turning herbal raw hops into sweet mango and papaya aromas.
         </p>
 
-        <h2 style="margin-top: 2.5rem; margin-bottom: 1.2rem; color: var(--text-bright);">2. Temperature Thresholds: 60°F vs 68°F</h2>
-        <p>
+        <h2 id="postH2" style="margin-top: 2.5rem; margin-bottom: 1.2rem; color: var(--text-bright);">2. Temperature Thresholds: 60°F vs 68°F</h2>
+        <p id="postP2">
           At Liquid Neon, our cellar team conducted extensive trial batches to pinpoint the exact extraction kinetics of Citra and Mosaic hops. We discovered that dry-hopping at 65°F for exactly 72 hours achieves maximum oil saturation while avoiding vegetal "hop creep" caused by enzyme re-fermentation.
         </p>
 
-        <ul style="margin: 1.5rem 0 2rem 2rem; color: var(--text-main);">
+        <ul id="postList" style="margin: 1.5rem 0 2rem 2rem; color: var(--text-main);">
           <li style="margin-bottom: 0.5rem;"><strong>Myrcene Oils:</strong> Responsible for resinous pine and citrus punch. Highly volatile.</li>
           <li style="margin-bottom: 0.5rem;"><strong>Humulene:</strong> Elegant noble herbal notes, best extracted at cool temperatures.</li>
           <li style="margin-bottom: 0.5rem;"><strong>Thiols (3MH & 3MHA):</strong> Tropical passionfruit compounds found in Nelson Sauvin and Galaxy hops.</li>
         </ul>
 
-        <p>
+        <p id="postP3">
           By recirculating the hop bed using pressurized carbon dioxide bursts, we double hop contact without exposing raw beer to damaging oxygen ingress.
         </p>
       </div>
@@ -161,22 +161,22 @@
           <p>Explore more articles written by our brewing staff.</p>
         </div>
 
-        <div class="grid grid-3">
+        <div class="grid grid-3" id="relatedGrid">
           <div class="card">
             <span class="badge badge-green" style="margin-bottom: 0.8rem;">Yeast Lab</span>
-            <h3><a href="blog.html">Wild Kveik Yeast Fermentation</a></h3>
+            <h3><a href="blog-details.html?post=kveik-yeast">Wild Kveik Yeast Fermentation</a></h3>
             <p style="font-size: 0.88rem;">How Norwegian farmhouse yeast ferments clean at extreme high temperatures.</p>
           </div>
 
           <div class="card">
             <span class="badge badge-copper" style="margin-bottom: 0.8rem;">Barrel Room</span>
-            <h3><a href="blog.html">Demystifying Barrel-Aged Stouts</a></h3>
+            <h3><a href="blog-details.html?post=barrel-aged-stouts">Demystifying Barrel-Aged Stouts</a></h3>
             <p style="font-size: 0.88rem;">Exploring 12-month Kentucky bourbon cask wood tannin maturation.</p>
           </div>
 
           <div class="card">
             <span class="badge" style="margin-bottom: 0.8rem;">Taproom Life</span>
-            <h3><a href="blog.html">Building An Unplugged Stage</a></h3>
+            <h3><a href="blog-details.html?post=acoustic-stage">Building An Unplugged Stage</a></h3>
             <p style="font-size: 0.88rem;">Crafting acoustic timber stage walls for community live sessions.</p>
           </div>
         </div>
@@ -209,10 +209,10 @@
           </a>
           <p>Local craft brewery & taproom creating bold, authentic small-batch beers for community gatherings.</p>
           <div class="social-links">
-            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-            <a href="https://x.com" target="_blank" rel="noopener" class="social-btn" aria-label="X"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-btn" aria-label="YouTube"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+            <a href="https://facebook.com/LiquidNeonBrew" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://instagram.com/liquidneonbrew" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="https://x.com/LiquidNeonBrew" target="_blank" rel="noopener" class="social-btn" aria-label="X"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="https://youtube.com/@LiquidNeonBrew" target="_blank" rel="noopener" class="social-btn" aria-label="YouTube"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
           </div>
         </div>
 
@@ -268,5 +268,220 @@
   </div>
 
   <script src="../assets/js/main.js"></script>
+  <script>
+  (function () {
+    var POSTS = {
+      "dry-hopping": {
+        title: 'The Science of Dry-Hopping: Unlocking <span class="text-accent">Hazy IPA Aromas</span>',
+        docTitle: "The Science of Dry-Hopping | Liquid Neon Brewery Blog",
+        badge: "Hop Science", date: "Published: Oct 4, 2026", read: "• 6 Min Read", author: "• By Head Brewer Marcus Vance",
+        image: "../assets/images/blog-dry-hopping.jpg", alt: "The Science of Dry-Hopping Hazy IPA",
+        quote: "\u201CDry-hopping is not merely throwing hop pellets into a cold tank. It is an intricate biochemical reaction where yeast enzymes transform non-aromatic glycosides into explosive fruit terpenes.\u201D",
+        intro: "When craft beer fans lift a glass of juicy Hazy IPA to their nose, they are greeted by an unmistakable blast of ripe passionfruit, crushed guava, and bright pink grapefruit. But where do these aromatics originate? Unlike traditional boiling hops that contribute bitterness, dry-hopping extracts volatile essential oils without adding harsh alpha-acid bitterness.",
+        h1: "1. Biotransformation: The Yeast Connection",
+        p1: "During active primary fermentation, yeast cells produce beta-glucosidase enzymes. When hop pellets are introduced during late active fermentation (day 3 to 5), these enzymes break open sugar-bound glycosides present in hop lupulin glands. This releases free monoterpenes such as linalool and geraniol, turning herbal raw hops into sweet mango and papaya aromas.",
+        h2: "2. Temperature Thresholds: 60\u00B0F vs 68\u00B0F",
+        p2: "At Liquid Neon, our cellar team conducted extensive trial batches to pinpoint the exact extraction kinetics of Citra and Mosaic hops. We discovered that dry-hopping at 65\u00B0F for exactly 72 hours achieves maximum oil saturation while avoiding vegetal \u201Chop creep\u201D caused by enzyme re-fermentation.",
+        bullets: ["<strong>Myrcene Oils:</strong> Responsible for resinous pine and citrus punch. Highly volatile.", "<strong>Humulene:</strong> Elegant noble herbal notes, best extracted at cool temperatures.", "<strong>Thiols (3MH &amp; 3MHA):</strong> Tropical passionfruit compounds found in Nelson Sauvin and Galaxy hops."],
+        p3: "By recirculating the hop bed using pressurized carbon dioxide bursts, we double hop contact without exposing raw beer to damaging oxygen ingress."
+      },
+      "kveik-yeast": {
+        title: 'Wild Kveik Yeast Strains <span class="text-accent">Explored</span>',
+        docTitle: "Wild Kveik Yeast Strains Explored | Liquid Neon Brewery Blog",
+        badge: "Fermentation", date: "Published: Oct 1, 2026", read: "• 5 Min Read", author: "• By Marcus Vance",
+        image: "https://i.pinimg.com/736x/88/04/41/880441d1841993c6ba8519bd1d50a449.jpg", alt: "Wild Kveik yeast fermentation vessels",
+        quote: "\u201CKveik ferments clean at temperatures that would stress ordinary ale yeast into off-flavours \u2014 and it finishes in half the time.\u201D",
+        intro: "Norwegian farmhouse brewers have pitched and re-pitched Kveik for generations, fermenting at a blazing 95\u00B0F. Instead of harsh fusels, these strains throw bright orange zest, ripe pineapple, and a whisper of farmhouse spice.",
+        h1: "1. Why Kveik Thrives Hot",
+        p1: "Kveik strains such as Voss and Hornindal evolved in wooden farmhouse vessels with no temperature control. Their heat-shock proteins stay active past 100\u00B0F, so fermentation races to completion in 48 to 72 hours while suppressing diacetyl and acetaldehyde.",
+        h2: "2. How We Use It at Liquid Neon",
+        p2: "We pitch Voss Kveik into our summer farmhouse pale at 90\u00B0F, then let it free-rise. The result is a bone-dry beer with tropical esters that tastes dry-hopped \u2014 before a single hop is added.",
+        bullets: ["<strong>Voss:</strong> Orange citrus and clean high-heat attenuation.", "<strong>Hornindal:</strong> Pineapple, tropical candy, farmhouse depth.", "<strong>Oslo:</strong> Neutral lager-like profile at ale speed."],
+        p3: "Harvest tip: top-crop Kveik at high krausen, dry it on parchment, and it survives months in the freezer \u2014 a living heirloom."
+      },
+      "cryo-hops": {
+        title: 'Cryo-Hops vs Whole Cone <span class="text-accent">Flowers</span>',
+        docTitle: "Cryo-Hops vs Whole Cone Flowers | Liquid Neon Brewery Blog",
+        badge: "Hop Science", date: "Published: Sep 24, 2026", read: "• 7 Min Read", author: "• By Marcus Vance",
+        image: "https://i.pinimg.com/1200x/9c/fb/0c/9cfb0c5e8165051d001420b72fd1eef0.jpg", alt: "Fresh whole-cone hops for Cryo-hop comparison",
+        quote: "\u201CCryo powder is hop flavour with the volume turned up \u2014 but whole cones still win on texture and soul.\u201D",
+        intro: "Cryogenic lupulin powder concentrates the resin glands of whole hops into a potent, low-vegetal powder. Side by side in the same pale ale recipe, the two forms diverge sharply in aroma intensity, bitterness, and mouthfeel.",
+        h1: "1. What Cryo Changes",
+        p1: "By freezing hops with liquid nitrogen and sieving away bract and stem, Cryo delivers roughly twice the alpha acids and oils per gram. That means bigger citrus punch with less grassy astringency and far less beer absorbed into hop sludge.",
+        h2: "2. When Cones Still Win",
+        p2: "Whole cones act as a natural filter bed, give a rounder bitterness, and release delicate tea-like aromatics over a longer steep. For our harvest pale ale we still use whole Yakima cones in the hopback for that fresh-cut meadow character.",
+        bullets: ["<strong>Cryo:</strong> Intense aroma, less vegetal matter, higher yield.", "<strong>T-90 pellets:</strong> The workhorse \u2014 balanced and consistent.", "<strong>Whole cone:</strong> Gentle extraction, rustic texture, best fresh."],
+        p3: "Our rule: Cryo for explosive IPA dry-hops, whole cone for harvest-season nuance. Blend both when you want power with poetry."
+      },
+      "maris-otter": {
+        title: 'The Magic of Maris Otter <span class="text-accent">Malt</span>',
+        docTitle: "The Magic of Maris Otter Malt | Liquid Neon Brewery Blog",
+        badge: "Malt Profile", date: "Published: Sep 18, 2026", read: "• 5 Min Read", author: "• By Julian Thorne",
+        image: "https://i.pinimg.com/1200x/d8/08/cd/d808cd44fe84c662895606c2c80547bb.jpg", alt: "Brewer handling Maris Otter malt in the brewhouse",
+        quote: "\u201CMaris Otter is the sourdough starter of malt \u2014 old, stubborn, and irreplaceable.\u201D",
+        intro: "Bred in 1965, Maris Otter winter barley refuses to die because no modern high-yield variety matches its biscuity, nutty depth. Floor-malted and gently kilned, it gives our bitters and porters a fresh-bread backbone.",
+        h1: "1. Flavour You Can Taste Blind",
+        p1: "Expect digestive biscuit, toasted hazelnut, and a soft toffee finish. In a SMASH brew next to plain 2-row, Maris Otter adds a full extra octave of malt richness without crystal sweetness.",
+        h2: "2. Mashing for Character",
+        p2: "We mash Maris Otter thick at 152\u00B0F for 60 minutes with a single infusion. Its husky husk builds a fast filter bed, and its high protein feeds a creamy, lasting head.",
+        bullets: ["<strong>Floor-malting:</strong> Slow germination builds deeper flavour.", "<strong>Low nitrogen:</strong> Clean fermentations, brilliant clarity.", "<strong>Pairing:</strong> East Kent Goldings hops and open fermentation."],
+        p3: "It costs more per sack than commodity malt. One sip of our best bitter tells you exactly where the money went."
+      },
+      "west-coast-vs-hazy": {
+        title: 'West Coast vs New England <span class="text-accent">Hazy IPA</span>',
+        docTitle: "West Coast vs New England Hazy IPA | Liquid Neon Brewery Blog",
+        badge: "Style Guide", date: "Published: Sep 12, 2026", read: "• 6 Min Read", author: "• By Julian Thorne",
+        image: "https://i.pinimg.com/1200x/99/dc/92/99dc922ba2506d85786dd0209bf120ac.jpg", alt: "West Coast vs New England Hazy IPA pours",
+        quote: "\u201CClear and bitter versus soft and juicy \u2014 two philosophies, one hop.\u201D",
+        intro: "West Coast IPA is lean, brilliant, and piney with a firm bitter snap. New England Hazy IPA is opaque, pillowy, and tropical with barely-there bitterness. Learn to tell them apart by sight, aroma, and feel.",
+        h1: "1. Look and Feel",
+        p1: "West Coast pours crystal gold with a rocky white head and resinous carbonation bite. Hazy pours opaque sunrise-orange with a dense, smoothie-like body built on oats, wheat, and low-flocculation yeast.",
+        h2: "2. Hop Character",
+        p2: "West Coast leans Centennial and Simcoe: grapefruit pith, pine sap, dank resin, 60+ IBU. Hazy leans Citra and Mosaic with heavy dry-hopping: guava, mango, peach rings, often under 40 perceived IBU.",
+        bullets: ["<strong>West Coast:</strong> Bitter, dry, pine-citrus, brilliant clarity.", "<strong>Hazy:</strong> Soft, juicy, tropical, opaque haze.", "<strong>Try this:</strong> Taste Neon Haze next to a classic West Coast pour."],
+        p3: "Neither is better \u2014 bitterness wakes the palate, softness coats it. Order by mood, not by hype."
+      },
+      "barrel-aged-stouts": {
+        title: 'Demystifying Barrel-Aged <span class="text-accent">Stouts</span>',
+        docTitle: "Demystifying Barrel-Aged Stouts | Liquid Neon Brewery Blog",
+        badge: "Style Guide", date: "Published: Sep 5, 2026", read: "• 8 Min Read", author: "• By Elena Rostova",
+        image: "https://i.pinimg.com/736x/a4/79/d2/a479d225b197e836792aba5e8a87289c.jpg", alt: "Barrel-aged imperial stout pour",
+        quote: "\u201COak is a spice rack: vanilla, coconut, char, smoke \u2014 time does the blending.\u201D",
+        intro: "Bourbon char brings vanilla and caramel, rye spice brings pepper and dill, and months of micro-oxygenation round roasted edges into silk. Here is how to read a barrel-aged stout label like a blender.",
+        h1: "1. What the Barrel Adds",
+        p1: "Fresh-charred American oak contributes vanillin, oak lactones (coconut), and toasted sugars. Used bourbon or rye barrels layer whiskey warmth, while the char itself filters harsh roast into chocolate and espresso.",
+        h2: "2. Time and Blending",
+        p2: "Our Velvet Darkness rests 9 months in bourbon casks, then we blend back 20% fresh stout for lift. Too long and tannin dries the finish; too short and spirit heat overwhelms the base beer.",
+        bullets: ["<strong>Bourbon:</strong> Vanilla, caramel, coconut, warmth.", "<strong>Rye:</strong> Pepper, baking spice, drier edge.", "<strong>Serve:</strong> 55\u00B0F in a snifter; sip, don\u2019t shoot."],
+        p3: "Look for integrated oak \u2014 not lumber, not liquor. The best barrels disappear into the beer."
+      },
+      "wild-sour-ales": {
+        title: 'Understanding Wild <span class="text-accent">Sour Ales</span>',
+        docTitle: "Understanding Wild Sour Ales | Liquid Neon Brewery Blog",
+        badge: "Style Guide", date: "Published: Aug 29, 2026", read: "• 6 Min Read", author: "• By Elena Rostova",
+        image: "https://i.pinimg.com/736x/3c/23/94/3c2394b7711a06c798a388b1b005e8a4.jpg", alt: "Wild sour ale with citrus garnish",
+        quote: "\u201CSour beer is farming, not manufacturing \u2014 microbes set the schedule.\u201D",
+        intro: "Lactobacillus sours quickly and cleanly, Pediococcus sours slowly with complexity, and Brettanomyces adds funk, fruit, and farmhouse soul. Our Sunburst Sour uses all three in careful sequence.",
+        h1: "1. The Souring Microbes",
+        p1: "Lactobacillus drops pH in days with lemony brightness (kettle sours). Pediococcus works over months, adding lactic depth plus buttery diacetyl that Brett later cleans into pineapple and hay.",
+        h2: "2. Tasting the Spectrum",
+        p2: "Berliner weisse is tart and light; mixed-fermentation golden ales are complex and vinous; fruited kettle sours like ours layer passionfruit and lime over sea-salt crispness.",
+        bullets: ["<strong>Lacto:</strong> Fast, clean, citrus snap.", "<strong>Pedio + Brett:</strong> Slow, funky, layered.", "<strong>Serve:</strong> Cold, with salty snacks and sunshine."],
+        p3: "Start with fruited sours, graduate to oak-aged mixed fermentation. Funk is an acquired joy."
+      },
+      "hop-harvest": {
+        title: 'Fresh Hop Harvest with <span class="text-accent">Valley Farms</span>',
+        docTitle: "Fresh Hop Harvest with Valley Farms | Liquid Neon Brewery Blog",
+        badge: "Community", date: "Published: Aug 22, 2026", read: "• 4 Min Read", author: "• By Julian Thorne",
+        image: "https://i.pinimg.com/1200x/46/9b/bb/469bbbcba74a398a650ff0fef72bd6b3.jpg", alt: "Local hop farmers harvest story",
+        quote: "\u201CWet hops wait for no one \u2014 six hours from bine to kettle or not at all.\u201D",
+        intro: "We drove to Yakima Valley at dawn, hand-selected 500 lbs of fresh-picked Centennial and Citra, and rushed them back to our kettles within six hours of picking for our annual wet-hop celebration.",
+        h1: "1. The Harvest Sprint",
+        p1: "Undried hops are 80% water and spoil fast, so the whole brew day runs backwards from the farm schedule. Pickers fill burlap sacks, our truck idles with the cooler running, and the mash tun is already hot when we arrive.",
+        h2: "2. What Wet Hops Taste Like",
+        p2: "Expect fresh-cut grass, grapefruit pith, juniper, and a green resin snap you never get from pellets. It only lasts weeks \u2014 drink it fresh, preferably in the taproom with the farmers.",
+        bullets: ["<strong>500 lbs:</strong> Picked, driven, and brewed same-day.", "<strong>Varieties:</strong> Centennial, Citra, and a mystery experimental lot.", "<strong>Release:</strong> Limited draft + 200 crowlers, then gone."],
+        p3: "Thank you to Valley Farms for the 4 a.m. coffee, the sticky hands, and the best-smelling truck in Washington."
+      },
+      "acoustic-stage": {
+        title: 'Building An Unplugged <span class="text-accent">Acoustic Stage</span>',
+        docTitle: "Building An Unplugged Acoustic Stage | Liquid Neon Brewery Blog",
+        badge: "Taproom Life", date: "Published: Aug 15, 2026", read: "• 4 Min Read", author: "• By Elena Rostova",
+        image: "https://i.pinimg.com/736x/42/a6/39/42a63952393fd9703494129cc72ccdbc.jpg", alt: "Acoustic music nights in taproom",
+        quote: "\u201CWe built the stage from cedar so the room itself sings along.\u201D",
+        intro: "Working with local woodworkers, we built an acoustically tuned cedar stage inside our taproom hall \u2014 no amps required for the front rows, and vinyl DJ sets every other Friday.",
+        h1: "1. Cedar, Angles, and Quiet Beer Lines",
+        p1: "Cedar panels diffuse high frequencies, angled baffles kill slap-back echo, and we rerouted glycol lines so the room stays pin-drop quiet between songs. The result is warm, intimate, and loud only when it should be.",
+        h2: "2. Thursday Nights Now",
+        p2: "Acoustic duos on Thursdays, trivia on Tuesdays, vinyl DJs on Fridays. Musicians drink free on show nights \u2014 bring a guitar, leave with friends and a growler.",
+        bullets: ["<strong>Thursdays:</strong> Unplugged sets, 7\u20139 p.m.", "<strong>Fridays:</strong> Vinyl-only DJ nights.", "<strong>Book:</strong> Local acts via the contact page."],
+        p3: "Come early, grab the corner booth, and hear what a brewery sounds like when it listens."
+      },
+      "malt-family": {
+        title: 'Meet the Malt Family: <span class="text-accent">Riverside Grain Co.</span>',
+        docTitle: "Meet the Malt Family: Riverside Grain Co. | Liquid Neon Brewery Blog",
+        badge: "Local Culture", date: "Published: Aug 8, 2026", read: "• 5 Min Read", author: "• By Julian Thorne",
+        image: "https://i.pinimg.com/1200x/2b/fd/15/2bfd1584c418f600ead56756d2d9d8f2.jpg", alt: "Riverside family malt farm",
+        quote: "\u201CGreat beer starts 40 miles away in living soil.\u201D",
+        intro: "Third-generation farmers at Riverside Grain Co. grow our Maris Otter and local wheat with cover crops, hedgerows, and patience. We pay premium \u2014 and taste the difference in every mash.",
+        h1: "1. Farming for Flavour",
+        p1: "Low-nitrogen barley, gentle combining, and on-farm storage keep kernels intact and sweet. Their wheat adds silky body to our Hazy IPA without the astringency of commodity grain.",
+        h2: "2. Why Premium Matters",
+        p2: "Direct contracts let the family invest in soil health instead of chasing yield. Our spent grain goes back as dairy feed, closing the loop between field, fermenter, and farm.",
+        bullets: ["<strong>40 miles:</strong> Field to fermenter, same week.", "<strong>Cover crops:</strong> Rye and clover, never bare soil.", "<strong>Taste it:</strong> Ask for the Riverside bitter on cask."],
+        p3: "Next harvest tour leaves from the taproom \u2014 boots recommended, pint included."
+      },
+      "mural-artists": {
+        title: 'Taproom Walls by Local <span class="text-accent">Mural Artists</span>',
+        docTitle: "Taproom Walls by Local Mural Artists | Liquid Neon Brewery Blog",
+        badge: "Local Culture", date: "Published: Aug 1, 2026", read: "• 4 Min Read", author: "• By Elena Rostova",
+        image: "https://i.pinimg.com/736x/48/eb/e4/48ebe485b4f6ab972bca16a99d79dfc2.jpg", alt: "Local artists painting taproom mural",
+        quote: "\u201COur walls pour as hard as our taps.\u201D",
+        intro: "Five neighbourhood artists turned our brick into neon-soaked murals \u2014 hop vines, herons, and a glowing fermentation tank you can spot from the street. Rotating gallery nights keep it fresh.",
+        h1: "1. The Artists",
+        p1: "Each painter got one wall, one palette constraint (neon amber + midnight), and total freedom. The clash of styles \u2014 botanical, brutalist, cartoon \u2014 somehow became one glowing story.",
+        h2: "2. Gallery Nights",
+        p2: "First Fridays: meet the painters, buy prints, vote on the next wall. Ten percent of print sales funds youth art classes two blocks away.",
+        bullets: ["<strong>5 walls:</strong> 5 artists, 1 glowing brief.", "<strong>Prints:</strong> Available at the bar, signed.", "<strong>Next vote:</strong> Patio wall, this Friday."],
+        p3: "Order a Sunburst Sour, stand under the heron wall, and watch it glow."
+      },
+      "mug-club": {
+        title: 'Regulars of Liquid Neon: <span class="text-accent">The Mug Club</span>',
+        docTitle: "Regulars of Liquid Neon: The Mug Club | Liquid Neon Brewery Blog",
+        badge: "Community", date: "Published: Jul 25, 2026", read: "• 4 Min Read", author: "• By Marcus Vance",
+        image: "https://i.pinimg.com/736x/97/c2/cb/97c2cbf7ea701d80da1be5e85a5d6c3c.jpg", alt: "Regulars sharing a fresh pour",
+        quote: "\u201CThe mugs have names. The stories have legs.\u201D",
+        intro: "From first-pour Fridays to trivia dynasties, our Mug Club regulars have engraved steins on the wall and opinions on everything. Meet the neighbours who made Liquid Neon a living room.",
+        h1: "1. Rituals",
+        p1: "Dana calls the corner stool \u2018the office\u2019. The Thursday crib team has three championships and one infamous protest. New members get toasted in \u2014 literally, with a 4oz welcome pour.",
+        h2: "2. Joining the Club",
+        p2: "Twenty-four charter mugs remain. Members get first taste of pilot batches, a birthday cask pull, and their name burned into the oak wall \u2014 misspellings included, per tradition.",
+        bullets: ["<strong>Trivia:</strong> Tuesdays, 7 p.m. \u2014 bring wits.", "<strong>First-pour Friday:</strong> New keg, first pint free for members.", "<strong>Wall of mugs:</strong> Ask your bartender for the tour."],
+        p3: "Regulars aren\u2019t customers. They\u2019re co-brewers with better stories."
+      },
+      "spent-grain": {
+        title: 'Spent Grain to Dairy <span class="text-accent">Farm Loop</span>',
+        docTitle: "Spent Grain to Dairy Farm Loop | Liquid Neon Brewery Blog",
+        badge: "Sustainability", date: "Published: Jul 18, 2026", read: "• 5 Min Read", author: "• By Julian Thorne",
+        image: "https://i.pinimg.com/1200x/57/4b/d9/574bd95b5f88ed0eef490b904b48b4e7.jpg", alt: "Community gathering and spent grain sustainability",
+        quote: "\u201CZero waste tastes better.\u201D",
+        intro: "Every brew donates 800 lbs of spent grain to local dairies. Cows get premium feed, we hit near-zero landfill waste, and the milk comes back as cheese for our pairing nights.",
+        h1: "1. The Loop",
+        p1: "Hot grain leaves the mash tun straight into sealed totes. By noon it is at the dairy; by Friday it is milk, then cheese, then back on our pairing boards next to the very beer it helped make.",
+        h2: "2. Bigger Footprint Goals",
+        p2: "Solar covers our kettles, glycol recovery saves water, and crowler carriers are compostable. Spent grain was our first loop \u2014 refill stations and hop-compost are next.",
+        bullets: ["<strong>800 lbs:</strong> Donated per brew, every brew.", "<strong>Solar:</strong> 100% of kettle heating.", "<strong>Pairing nights:</strong> Cheese from grain-fed cows + fresh pours."],
+        p3: "Drink a pint, feed a cow, close the circle. That is the Liquid Neon way."
+      }
+    };
+    function qs(name) {
+      var m = new RegExp("[?&]" + name + "=([^&#]*)").exec(window.location.search);
+      return m ? decodeURIComponent(m[1].replace(/\+/g, " ")) : null;
+    }
+    var slug = (qs("post") || "dry-hopping").toLowerCase();
+    var post = POSTS[slug] || POSTS["dry-hopping"];
+    document.title = post.docTitle;
+    var set = function (id, html) { var el = document.getElementById(id); if (el) el.innerHTML = html; };
+    set("postBadge", post.badge); set("postDate", post.date); set("postRead", post.read); set("postAuthor", post.author);
+    set("postTitle", post.title);
+    var img = document.getElementById("postImage");
+    if (img) { img.src = post.image; img.alt = post.alt; }
+    set("postQuote", "\u201C" + post.quote.replace(/^[\u201C\u201D"]+|[\u201C\u201D"]+$/g, "") + "\u201D");
+    set("postIntro", post.intro); set("postH1", post.h1); set("postP1", post.p1);
+    set("postH2", post.h2); set("postP2", post.p2); set("postP3", post.p3);
+    var list = document.getElementById("postList");
+    if (list) { list.innerHTML = post.bullets.map(function (b) { return "<li style='margin-bottom: 0.5rem;'>" + b + "</li>"; }).join(""); }
+    var grid = document.getElementById("relatedGrid");
+    if (grid) {
+      var keys = Object.keys(POSTS).filter(function (k) { return k !== slug; }).slice(0, 3);
+      var badgeCls = ["badge-green", "badge-copper", ""];
+      grid.innerHTML = keys.map(function (k, i) {
+        var p = POSTS[k];
+        var tmp = document.createElement("div"); tmp.innerHTML = p.title; var plain = tmp.textContent;
+        return "<div class='card'><span class='badge " + badgeCls[i % 3] + "' style='margin-bottom: 0.8rem;'>" + p.badge + "</span><h3><a href='blog-details.html?post=" + k + "'>" + plain + "</a></h3><p style='font-size: 0.88rem;'>" + p.intro.slice(0, 90) + "&hellip;</p></div>";
+      }).join("");
+    }
+  })();
+  </script>
 </body>
 </html>

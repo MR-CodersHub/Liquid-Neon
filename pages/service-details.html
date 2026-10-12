@@ -68,13 +68,13 @@
 
   <main>
     <!-- SECTION 1: SERVICE HERO -->
-    <section class="hero" id="service-hero">
+    <section class="hero" id="service-hero" style="background: linear-gradient(rgba(11,10,9,0.85), rgba(11,10,9,0.75)), url('https://i.pinimg.com/736x/ab/8b/b3/ab8bb3c111778c6fe1a991441a96dd43.jpg') center / cover no-repeat;">
       <div class="container">
         <div class="hero-grid">
           <div class="hero-content">
             <a href="services.html" style="font-size: 0.85rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem; display: inline-block;"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back To Services</a>
-            <h1 class="font-display">The Taproom <span class="text-accent">Experience</span></h1>
-            <p>Step inside our 4,000 sq ft industrial craft hall where 16 cold-conditioned craft taps flow directly from our stainless fermenters located right behind glass walls.</p>
+            <h1 class="font-display" id="svcTitle">The Taproom <span class="text-accent">Experience</span></h1>
+            <p id="svcDesc">Step inside our 4,000 sq ft industrial craft hall where 16 cold-conditioned craft taps flow directly from our stainless fermenters located right behind glass walls.</p>
             <div class="flex gap-2">
               <a href="contact.html" class="btn btn-primary">Reserve A Table</a>
               <a href="pricing.html" class="btn btn-secondary">View Flight Prices</a>
@@ -82,7 +82,7 @@
           </div>
           <div class="hero-media">
             <div class="hero-img-wrapper">
-              <img src="../assets/images/brewery_hero.jpg" alt="Liquid Neon Taproom Interior Overview">
+              <img id="svcImage" src="../assets/images/brewery_hero.jpg" alt="Liquid Neon Taproom Interior Overview">
             </div>
           </div>
         </div>
@@ -100,16 +100,16 @@
 
         <div class="grid grid-3">
           <div class="card">
-            <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"/><path d="M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v2H7v-2a2 2 0 0 0-4 0Z"/><path d="M5 18v2M19 18v2"/></svg> Seating Options</h3>
-            <p>Choose from hand-carved oak long tables for big groups, intimate high-top bar seats, or cozy leather lounge armchairs.</p>
+            <h3 id="feat1h"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"/><path d="M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v2H7v-2a2 2 0 0 0-4 0Z"/><path d="M5 18v2M19 18v2"/></svg> Seating Options</h3>
+            <p id="feat1p">Choose from hand-carved oak long tables for big groups, intimate high-top bar seats, or cozy leather lounge armchairs.</p>
           </div>
           <div class="card">
-            <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="20" cy="16" r="2"/><circle cx="9" cy="13" r="2"/><path d="M11 17c-3.2 0-5.5-2.4-5.5-5.4 0-1.4 1-2.6 2.1-2.6 1.4 0 1.9 1.6 3.4 1.6s2-1.6 3.4-1.6c1.1 0 2.1 1.2 2.1 2.6C16.5 14.6 14.2 17 11 17Z"/></svg> Heated Dog Patio</h3>
-            <p>Our outdoor beer garden is 100% dog-friendly, equipped with overhead radiant heaters, fire pits, and fresh water bowls.</p>
+            <h3 id="feat2h"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="20" cy="16" r="2"/><circle cx="9" cy="13" r="2"/><path d="M11 17c-3.2 0-5.5-2.4-5.5-5.4 0-1.4 1-2.6 2.1-2.6 1.4 0 1.9 1.6 3.4 1.6s2-1.6 3.4-1.6c1.1 0 2.1 1.2 2.1 2.6C16.5 14.6 14.2 17 11 17Z"/></svg> Heated Dog Patio</h3>
+            <p id="feat2p">Our outdoor beer garden is 100% dog-friendly, equipped with overhead radiant heaters, fire pits, and fresh water bowls.</p>
           </div>
           <div class="card">
-            <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg> Artisan Food Trucks</h3>
-            <p>Every Thursday through Sunday we host rotating gourmet food trucks serving wood-fired pizza, smoked smashburgers, and tacos.</p>
+            <h3 id="feat3h"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg> Artisan Food Trucks</h3>
+            <p id="feat3p">Every Thursday through Sunday we host rotating gourmet food trucks serving wood-fired pizza, smoked smashburgers, and tacos.</p>
           </div>
         </div>
       </div>
@@ -269,10 +269,10 @@
           </a>
           <p>Local craft brewery & taproom creating bold, authentic small-batch beers for community gatherings.</p>
           <div class="social-links">
-            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-            <a href="https://x.com" target="_blank" rel="noopener" class="social-btn" aria-label="X"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-btn" aria-label="YouTube"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+            <a href="https://facebook.com/LiquidNeonBrew" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://instagram.com/liquidneonbrew" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="https://x.com/LiquidNeonBrew" target="_blank" rel="noopener" class="social-btn" aria-label="X"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="https://youtube.com/@LiquidNeonBrew" target="_blank" rel="noopener" class="social-btn" aria-label="YouTube"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
           </div>
         </div>
 
@@ -328,5 +328,72 @@
   </div>
 
   <script src="../assets/js/main.js"></script>
+  <script>
+  (function () {
+    var SERVICES = {
+      "taproom": {
+        title: 'The Taproom <span class="text-accent">Experience</span>', docTitle: "Taproom Experience Service Details | Liquid Neon Brewery",
+        desc: "Step inside our 4,000 sq ft industrial craft hall where 16 cold-conditioned craft taps flow directly from our stainless fermenters located right behind glass walls.",
+        image: "../assets/images/brewery_hero.jpg", alt: "Liquid Neon Taproom Interior Overview",
+        f1h: "Seating Options", f1p: "Choose from hand-carved oak long tables for big groups, intimate high-top bar seats, or cozy leather lounge armchairs.",
+        f2h: "Heated Dog Patio", f2p: "Our outdoor beer garden is 100% dog-friendly, equipped with overhead radiant heaters, fire pits, and fresh water bowls.",
+        f3h: "Artisan Food Trucks", f3p: "Every Thursday through Sunday we host rotating gourmet food trucks serving wood-fired pizza, smoked smashburgers, and tacos."
+      },
+      "tasting": {
+        title: 'Craft Beer Tasting & <span class="text-accent">Flights</span>', docTitle: "Craft Beer Tasting & Flights | Liquid Neon Brewery",
+        desc: "Curate your own 4-beer tasting paddle or let our Master Cicerones guide you through hop aromas, malt finishes, and a $14 progression from pale to stout.",
+        image: "../assets/images/service-tasting.jpg", alt: "Craft Beer Tasting Flight Paddle",
+        f1h: "Custom Flight Paddles", f1p: "4 x 4oz pours on oak paddles with tasting sheets, pretzel palate cleansers, and staff-guided ordering from light to dark.",
+        f2h: "Cicerone Guidance", f2p: "Certified Cicerones explain hop oils, malt sweetness, and off-flavour detection while you taste through Hop Explorer or Dark & Barrel flights.",
+        f3h: "Souvenir Glassware", f3p: "Grand 8-tap matrix tastings include a keepsake pint glass, reserve pilot samples, and 10% off growler fills same-day."
+      },
+      "tours": {
+        title: 'Guided Brewery <span class="text-accent">Tours</span>', docTitle: "Guided Brewery Tours | Liquid Neon Brewery",
+        desc: "Walk among copper kettles, touch fresh hop cones, taste raw malt, and sample tank-fresh beer from fermenter ports on a 45-minute brewer-led tour.",
+        image: "../assets/images/service-tours.jpg", alt: "Brewery Tank Tour led by Brewer",
+        f1h: "Brewer-Led Walkthrough", f1p: "Master brewers explain mashing, lautering, boiling, whirlpooling, and cellar conditioning with live vessels in action.",
+        f2h: "Tank-Fresh Samples", f2p: "Taste unfiltered beer straight from fermenter sample ports plus raw malt, hop pellets, and yeast slurry sensory jars.",
+        f3h: "Souvenir & Discounts", f3p: "Every tour ends with a souvenir glass, $5 taproom credit, and 15% off same-day growler fills for your group."
+      },
+      "events": {
+        title: 'Private Events & <span class="text-accent">Group Buyouts</span>', docTitle: "Private Events & Group Buyouts | Liquid Neon Brewery",
+        desc: "Host corporate mixers, birthdays, or rehearsal dinners in our rustic brewery hall for 20 to 180 guests with custom taps and dedicated staff.",
+        image: "../assets/images/service-events.jpg", alt: "Private Taproom Event Space",
+        f1h: "Flexible Spaces", f1p: "Semi-private taproom bays for 20\u201340 guests or full 4,000 sq ft buyouts with patio, stage, PA, and projector included.",
+        f2h: "Custom Taps & Catering", f2p: "Pre-ordered flight paddles, 16-handle open bars, outside catering welcome, and custom-branded cans for milestone parties.",
+        f3h: "Dedicated Team", f3p: "Event manager, tap servers, and sound tech included so hosts actually enjoy their own party from first pour to last call."
+      },
+      "growler": {
+        title: 'Seasonal Drops & <span class="text-accent">Growler Fills</span>', docTitle: "Seasonal Drops & Growler Fills | Liquid Neon Brewery",
+        desc: "Take Liquid Neon home in 64oz growlers, 32oz crowlers, or limited 16oz 4-packs, sealed under counter-pressure for 14-day freshness.",
+        image: "../assets/images/service-growler.jpg", alt: "Seasonal Craft Beer Can and Tap",
+        f1h: "Counter-Pressure Fills", f1p: "Cold, oxygen-free fills with nitrogen-sealed caps keep hop aroma bright for two full weeks in your fridge.",
+        f2h: "Limited Releases", f2p: "Collector 16oz cans, barrel-aged reserve bottles, and 5-barrel pilot drops announced first to newsletter subscribers.",
+        f3h: "Bottle Locker Access", f3p: "Liquid Club members store cellar bottles in wooden lockers, skip release lines, and tap exclusive reserve kegs."
+      },
+      "community": {
+        title: 'Community & <span class="text-accent">Taproom Events</span>', docTitle: "Community & Taproom Events | Liquid Neon Brewery",
+        desc: "Trivia Tuesdays, unplugged Thursdays, vinyl Fridays, and monthly homebrew workshops connect local craft lovers week after week.",
+        image: "../assets/images/community-space.jpg", alt: "Community gathering in taproom space",
+        f1h: "Tuesday Trivia Night", f1p: "Compete from 7 p.m. for taproom gift cards and merch; Mug Club teams defend infamous championship streaks.",
+        f2h: "Acoustic Unplugged", f2p: "Live indie sets on our cedar stage Thursdays plus vinyl-only DJ Fridays with food-truck specials all night.",
+        f3h: "Homebrew Workshop", f3p: "First Sundays monthly: mashing, dry-hopping, and yeast health taught by our brewers \u2014 beginners leave with wort to ferment."
+      }
+    };
+    function qs(name) { var m = new RegExp("[?&]" + name + "=([^&#]*)").exec(window.location.search); return m ? decodeURIComponent(m[1].replace(/\+/g, " ")) : null; }
+    var slug = (qs("service") || "taproom").toLowerCase();
+    var svc = SERVICES[slug] || SERVICES["taproom"];
+    document.title = svc.docTitle;
+    var set = function (id, html) { var el = document.getElementById(id); if (el) el.innerHTML = html; };
+    set("svcTitle", svc.title); set("svcDesc", svc.desc);
+    var img = document.getElementById("svcImage"); if (img) { img.src = svc.image; img.alt = svc.alt; }
+    ["feat1h", "feat2h", "feat3h"].forEach(function (id, i) {
+      var el = document.getElementById(id);
+      var txt = [svc.f1h, svc.f2h, svc.f3h][i];
+      if (el) { var svg = el.querySelector("svg"); el.innerHTML = ""; if (svg) el.appendChild(svg); el.appendChild(document.createTextNode(" " + txt)); }
+    });
+    set("feat1p", svc.f1p); set("feat2p", svc.f2p); set("feat3p", svc.f3p);
+  })();
+  </script>
 </body>
 </html>
