@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('liquid_theme', theme);
     themeToggleBtns.forEach(btn => {
-      btn.innerHTML = theme === 'dark' ? '☀️' : '🌙';
+      btn.innerHTML = theme === 'dark' ? '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>' : '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>';
       btn.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'Light' : 'Dark'} mode`);
     });
   }
@@ -291,5 +291,49 @@ document.addEventListener('DOMContentLoaded', () => {
         timerSeconds.textContent = String(seconds).padStart(2, '0');
       }
     }, 1000);
+  }
+
+  // 10. Blog Search Engine (blog.html)
+  const blogSearchInput = document.getElementById('blogSearchInput');
+  const blogSearchBtn = document.getElementById('blogSearchBtn');
+  if (blogSearchInput && blogSearchBtn) {
+    const blogCards = document.querySelectorAll('#featured-story .card, #brewing-articles .card, #style-guides .card, #community-stories .card');
+    const blogSearchMsg = document.getElementById('blogSearchMsg');
+
+    const runBlogSearch = () => {
+      const raw = blogSearchInput.value.trim();
+      const query = raw.toLowerCase();
+      let shown = 0;
+
+      blogCards.forEach(card => {
+        const match = !query || card.textContent.toLowerCase().includes(query);
+        card.style.display = match ? '' : 'none';
+        if (match) shown++;
+      });
+
+      if (blogSearchMsg) {
+        blogSearchMsg.textContent = !query
+          ? ''
+          : shown
+            ? `${shown} result${shown === 1 ? '' : 's'} for "${raw}" — showing matches across all sections.`
+            : `No articles match "${raw}". Try "hops", "stout" or "trivia".`;
+      }
+
+      if (query && shown) {
+        const firstHit = document.getElementById('featured-story');
+        if (firstHit) firstHit.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+
+    blogSearchBtn.addEventListener('click', runBlogSearch);
+    blogSearchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        runBlogSearch();
+      }
+    });
+    blogSearchInput.addEventListener('input', () => {
+      if (!blogSearchInput.value.trim()) runBlogSearch();
+    });
   }
 });

@@ -206,6 +206,17 @@ img {
 .text-green { color: var(--green-600) !important; }
 .text-gold { color: var(--gold-400) !important; }
 
+/* Tagline eyebrow label (usable anywhere, not just section headers) */
+.tagline {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
 /* Section Header */
 .section-header {
   text-align: center;
@@ -288,6 +299,219 @@ img {
   font-size: 1.05rem;
 }
 
+/* Beer Style Filter Tags */
+.beer-filter-btn {
+  border-radius: var(--radius-full);
+  border-width: 1.5px;
+  padding: 0.65rem 1.4rem;
+  white-space: nowrap;
+}
+.beer-filter-btn.btn-secondary {
+  background: rgba(245, 158, 11, 0.08);
+  border-color: rgba(245, 158, 11, 0.45);
+  color: var(--text-main);
+}
+.beer-filter-btn.btn-secondary:hover {
+  background: rgba(245, 158, 11, 0.16);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.beer-filter-btn.active,
+.beer-filter-btn.btn-primary {
+  background: linear-gradient(135deg, var(--amber-500), var(--copper-600));
+  border-color: transparent;
+  color: #0b0a09;
+  box-shadow: 0 4px 20px var(--accent-glow);
+}
+[data-theme="light"] .beer-filter-btn.btn-secondary {
+  background: rgba(180, 83, 9, 0.08);
+  border-color: rgba(180, 83, 9, 0.45);
+  color: var(--text-main);
+}
+
+/* Keep tap-matrix card widths stable when filtering (auto-fill preserves empty tracks) */
+#beers-by-style .grid-3 {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+/* From Grain to Glass — compact photo cards with brand-tint overlay */
+.g-step {
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+}
+.g-step-img {
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+}
+.g-step-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+.g-step:hover .g-step-img img {
+  transform: scale(1.07);
+}
+/* Unifies mismatched photos + mutes watermarks/logos */
+.g-step-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(245, 158, 11, 0.14), rgba(11, 10, 9, 0.55)),
+    linear-gradient(135deg, rgba(194, 65, 12, 0.22), rgba(245, 158, 11, 0.08));
+  pointer-events: none;
+}
+.g-step-num {
+  position: absolute;
+  top: 0.7rem;
+  left: 0.7rem;
+  z-index: 2;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  background: linear-gradient(135deg, var(--amber-500), var(--copper-600));
+  color: #0b0a09;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+}
+[dir="rtl"] .g-step-num {
+  left: auto;
+  right: 0.7rem;
+}
+.g-step-body {
+  padding: 1.2rem 1.2rem 1.5rem;
+}
+.g-step-body h4 {
+  margin-bottom: 0.5rem;
+}
+.g-step-body p {
+  font-size: 0.88rem;
+}
+
+/* Brewing-process header sits on a fixed dark photo bg, so it must stay
+   light in ALL themes (theme vars go dark in light mode = unreadable) */
+#brewing-process .section-header h2 {
+  color: #ffffff;
+}
+#brewing-process .section-header p {
+  color: #f3ede3;
+}
+#brewing-process .section-header .tagline {
+  color: #fbbf24;
+}
+#brewing-process .section-header h2,
+#brewing-process .section-header .tagline,
+#brewing-process .section-header p {
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.75);
+}
+
+/* Team cards — flex column + equal badge rows so names/roles/bios line up */
+#brewery-team .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#brewery-team .card h3 {
+  margin-bottom: 0.6rem;
+}
+#brewery-team .card .badge {
+  min-height: 2.9em;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.4;
+  white-space: normal;
+}
+
+/* Featured story image — fixed heights (portrait art breaks % heights) */
+#featured-story .featured-media {
+  height: 420px;
+  overflow: hidden;
+}
+#featured-story .featured-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 768px) {
+  #featured-story .featured-media {
+    height: 260px;
+  }
+}
+
+/* Philosophy cards — flex column + equal title rows so copy lines up */
+#brewery-philosophy .card {
+  display: flex;
+  flex-direction: column;
+}
+#brewery-philosophy .card h3 {
+  min-height: 2.6em;
+  line-height: 1.3;
+}
+
+/* Core Values — editorial numbered rows + CTA banner */
+.values-list {
+  display: flex;
+  flex-direction: column;
+}
+.value-row {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.5rem 0.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background var(--transition-fast);
+}
+.value-row:first-child {
+  border-top: 1px solid var(--border-subtle);
+}
+.value-row:hover {
+  background: rgba(245, 158, 11, 0.05);
+}
+.value-num {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  line-height: 1;
+}
+.value-row h3 {
+  margin-bottom: 0.3rem;
+}
+.value-row p {
+  margin: 0;
+}
+.values-cta {
+  margin-top: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 2rem 2.2rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-hover);
+  background: radial-gradient(circle at 20% 50%, rgba(245, 158, 11, 0.18), var(--bg-card));
+}
+.values-cta h3 {
+  margin-bottom: 0.4rem;
+}
+.values-cta p {
+  margin: 0;
+}
+@media (max-width: 640px) {
+  .value-row {
+    grid-template-columns: 3.5rem 1fr;
+    gap: 1rem;
+  }
+}
+
 /* Badges */
 .badge {
   display: inline-flex;
@@ -366,14 +590,39 @@ img {
 .brand-icon {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, var(--amber-500), var(--copper-600));
+  background: linear-gradient(135deg, #1c1916, #0b0a09);
+  border: 1px solid rgba(245, 158, 11, 0.45);
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0b0a09;
+  color: var(--gold-400);
   font-weight: 900;
   font-size: 1.3rem;
+  box-shadow: 0 0 18px var(--accent-glow), inset 0 0 12px rgba(245, 158, 11, 0.12);
+}
+.brand-icon svg {
+  width: 26px;
+  height: 26px;
+  filter: drop-shadow(0 0 3px rgba(251, 191, 36, 0.9));
+}
+.brand-text {
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+.brand-name {
+  white-space: nowrap;
+}
+.brand-tagline {
+  font-family: var(--font-body);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 0.3rem;
+  white-space: nowrap;
 }
 
 .nav-links {
@@ -698,6 +947,9 @@ img {
   top: 1rem;
   right: 1rem;
   z-index: 2;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 [dir="rtl"] .beer-card-tag {
   right: auto;
@@ -1039,6 +1291,33 @@ textarea.form-control {
 .footer-links a:hover {
   color: var(--accent);
 }
+.social-links {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 1.3rem;
+}
+.social-btn {
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+}
+.social-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(245, 158, 11, 0.08);
+  transform: translateY(-2px);
+}
+.social-btn .icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  vertical-align: 0;
+}
 .footer-bottom {
   padding-top: 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -1117,6 +1396,65 @@ textarea.form-control {
   transform: scale(1);
 }
 
+/* Icon System (replaces emojis with inline SVG icons) */
+.icon {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: -0.12em;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+.icon-btn .icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  vertical-align: 0;
+}
+.back-to-top .icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  vertical-align: 0;
+}
+.nav-link .icon,
+.mobile-nav-link .icon {
+  width: 0.8em;
+  height: 0.8em;
+  margin-inline-start: 0.3rem;
+}
+.accordion-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.accordion-icon .icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  vertical-align: 0;
+}
+h3 .icon,
+h4 .icon {
+  width: 1em;
+  height: 1em;
+  margin-inline-end: 0.35rem;
+  vertical-align: -0.12em;
+}
+.check-icon {
+  color: var(--accent);
+  margin-inline-end: 0.5rem;
+}
+.btn .icon {
+  width: 1.05em;
+  height: 1.05em;
+  vertical-align: -0.15em;
+}
+.icon + .icon {
+  margin-inline-start: 0.35em;
+}
+
 /* Responsive Breakpoints */
 @media (max-width: 1024px) {
   .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -1142,7 +1480,9 @@ textarea.form-control {
 }
 
 @media (max-width: 480px) {
+  .brand-tagline { display: none; }
   .stats-grid { grid-template-columns: 1fr; }
   .hero-buttons { flex-direction: column; width: 100%; }
-  .btn { width: 100%; }
+  .hero-buttons .btn { width: 100%; }
+  .beer-filter-btn { width: auto; flex: 1 1 auto; }
 }
