@@ -29,12 +29,19 @@
   --text-main: #fcfaf7;
   --text-muted: #a8a29e;
   --text-bright: #ffffff;
-  --border-subtle: rgba(245, 158, 11, 0.2);
-  --border-hover: rgba(245, 158, 11, 0.5);
+  --border-subtle: rgba(var(--accent-rgb), 0.2);
+  --border-hover: rgba(var(--accent-rgb), 0.5);
   --accent: var(--amber-500);
-  --accent-glow: rgba(245, 158, 11, 0.25);
+  --accent-rgb: 245, 158, 11;
+  --accent-text: var(--amber-500);
+  --link-hover: var(--gold-400);
+  /* Native widgets (date-picker calendar icon, scrollbars) follow color-scheme;
+     dark inputs need a dark scheme so the icon renders light and stays visible */
+  color-scheme: dark;
+  --accent-glow: rgba(var(--accent-rgb), 0.25);
   --card-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.7);
   --nav-bg: rgba(11, 10, 9, 0.88);
+  --header-control-h: 42px;
   
   /* Typography */
   --font-display: 'Bebas Neue', 'Outfit', sans-serif;
@@ -61,11 +68,15 @@
   --text-main: #1c1917;
   --text-muted: #57534e;
   --text-bright: #0c0a09;
-  --border-subtle: rgba(180, 83, 9, 0.2);
-  --border-hover: rgba(180, 83, 9, 0.5);
+  --border-subtle: rgba(var(--accent-rgb), 0.2);
+  --border-hover: rgba(var(--accent-rgb), 0.5);
   --accent: var(--amber-600);
-  --accent-glow: rgba(217, 119, 6, 0.15);
-  --card-shadow: 0 10px 30px -5px rgba(180, 83, 9, 0.1);
+  --accent-rgb: 217, 119, 6;
+  --accent-text: #92400e;
+  --link-hover: #78350f;
+  color-scheme: light;
+  --accent-glow: rgba(var(--accent-rgb), 0.15);
+  --card-shadow: 0 10px 30px -5px rgba(var(--accent-rgb), 0.1);
   --nav-bg: rgba(251, 247, 238, 0.92);
 }
 
@@ -147,12 +158,12 @@ p {
 }
 
 a {
-  color: var(--accent);
+  color: var(--accent-text);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 a:hover {
-  color: var(--gold-400);
+  color: var(--link-hover);
 }
 
 img {
@@ -201,7 +212,7 @@ img {
 .gap-4 { gap: 2rem; }
 
 .text-center { text-align: center; }
-.text-accent { color: var(--accent) !important; }
+.text-accent { color: var(--accent-text) !important; }
 .text-copper { color: var(--copper-500) !important; }
 .text-green { color: var(--green-600) !important; }
 .text-gold { color: var(--gold-400) !important; }
@@ -211,7 +222,7 @@ img {
   display: inline-block;
   font-family: var(--font-display);
   font-size: 1.1rem;
-  color: var(--accent);
+  color: var(--accent-text);
   letter-spacing: 0.15em;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
@@ -227,7 +238,7 @@ img {
   display: inline-block;
   font-family: var(--font-display);
   font-size: 1.1rem;
-  color: var(--accent);
+  color: var(--accent-text);
   letter-spacing: 0.15em;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
@@ -257,13 +268,18 @@ img {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--amber-500), var(--copper-600));
+  background-color: var(--accent);
+  background-image: linear-gradient(135deg, var(--accent), var(--copper-600));
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  border-color: transparent;
   color: #0b0a09;
   box-shadow: 0 4px 20px var(--accent-glow);
 }
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+  box-shadow: 0 8px 25px rgba(var(--accent-rgb), 0.4);
   color: #000;
 }
 
@@ -274,8 +290,8 @@ img {
 }
 .btn-secondary:hover {
   border-color: var(--accent);
-  background: rgba(245, 158, 11, 0.08);
-  color: var(--accent);
+  background: rgba(var(--accent-rgb), 0.08);
+  color: var(--accent-text);
   transform: translateY(-2px);
 }
 
@@ -307,25 +323,25 @@ img {
   white-space: nowrap;
 }
 .beer-filter-btn.btn-secondary {
-  background: rgba(245, 158, 11, 0.08);
-  border-color: rgba(245, 158, 11, 0.45);
+  background: rgba(var(--accent-rgb), 0.08);
+  border-color: rgba(var(--accent-rgb), 0.45);
   color: var(--text-main);
 }
 .beer-filter-btn.btn-secondary:hover {
-  background: rgba(245, 158, 11, 0.16);
+  background: rgba(var(--accent-rgb), 0.16);
   border-color: var(--accent);
-  color: var(--accent);
+  color: var(--accent-text);
 }
 .beer-filter-btn.active,
 .beer-filter-btn.btn-primary {
-  background: linear-gradient(135deg, var(--amber-500), var(--copper-600));
+  background: linear-gradient(135deg, var(--accent), var(--copper-600));
   border-color: transparent;
   color: #0b0a09;
   box-shadow: 0 4px 20px var(--accent-glow);
 }
 [data-theme="light"] .beer-filter-btn.btn-secondary {
-  background: rgba(180, 83, 9, 0.08);
-  border-color: rgba(180, 83, 9, 0.45);
+  background: rgba(var(--accent-rgb), 0.08);
+  border-color: rgba(var(--accent-rgb), 0.45);
   color: var(--text-main);
 }
 
@@ -360,8 +376,8 @@ img {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(245, 158, 11, 0.14), rgba(11, 10, 9, 0.55)),
-    linear-gradient(135deg, rgba(194, 65, 12, 0.22), rgba(245, 158, 11, 0.08));
+    linear-gradient(180deg, rgba(var(--accent-rgb), 0.14), rgba(11, 10, 9, 0.55)),
+    linear-gradient(135deg, rgba(194, 65, 12, 0.22), rgba(var(--accent-rgb), 0.08));
   pointer-events: none;
 }
 .g-step-num {
@@ -375,7 +391,7 @@ img {
   font-weight: 800;
   font-size: 0.8rem;
   letter-spacing: 0.08em;
-  background: linear-gradient(135deg, var(--amber-500), var(--copper-600));
+  background: linear-gradient(135deg, var(--accent), var(--copper-600));
   color: #0b0a09;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
 }
@@ -402,7 +418,7 @@ img {
   color: #f3ede3;
 }
 #brewing-process .section-header .tagline {
-  color: #fbbf24;
+  color: var(--gold-400);
 }
 #brewing-process .section-header h2,
 #brewing-process .section-header .tagline,
@@ -474,7 +490,7 @@ img {
   border-top: 1px solid var(--border-subtle);
 }
 .value-row:hover {
-  background: rgba(245, 158, 11, 0.05);
+  background: rgba(var(--accent-rgb), 0.05);
 }
 .value-num {
   font-family: var(--font-display);
@@ -497,7 +513,7 @@ img {
   padding: 2rem 2.2rem;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-hover);
-  background: radial-gradient(circle at 20% 50%, rgba(245, 158, 11, 0.18), var(--bg-card));
+  background: radial-gradient(circle at 20% 50%, rgba(var(--accent-rgb), 0.18), var(--bg-card));
 }
 .values-cta h3 {
   margin-bottom: 0.4rem;
@@ -523,13 +539,13 @@ img {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   border-radius: var(--radius-full);
-  background: rgba(245, 158, 11, 0.12);
-  color: var(--accent);
+  background: rgba(var(--accent-rgb), 0.12);
+  color: var(--accent-text);
   border: 1px solid var(--border-subtle);
 }
 .badge-copper {
   background: rgba(194, 65, 12, 0.15);
-  color: #f97316;
+  color: var(--copper-500);
   border-color: rgba(194, 65, 12, 0.3);
 }
 .badge-green {
@@ -573,6 +589,11 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1.5rem;
+}
+.brand-logo,
+.nav-controls {
+  flex-shrink: 0;
 }
 
 .brand-logo {
@@ -585,13 +606,13 @@ img {
   text-decoration: none;
 }
 .brand-logo span {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 .brand-icon {
   width: 40px;
   height: 40px;
   background: linear-gradient(135deg, #1c1916, #0b0a09);
-  border: 1px solid rgba(245, 158, 11, 0.45);
+  border: 1px solid rgba(var(--accent-rgb), 0.45);
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
@@ -599,7 +620,7 @@ img {
   color: var(--gold-400);
   font-weight: 900;
   font-size: 1.3rem;
-  box-shadow: 0 0 18px var(--accent-glow), inset 0 0 12px rgba(245, 158, 11, 0.12);
+  box-shadow: 0 0 18px var(--accent-glow), inset 0 0 12px rgba(var(--accent-rgb), 0.12);
 }
 .brand-icon svg {
   width: 26px;
@@ -644,7 +665,7 @@ img {
   position: relative;
 }
 .nav-link:hover, .nav-link.active {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 .nav-link.active::after {
   content: '';
@@ -653,7 +674,7 @@ img {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--accent);
+  background-color: var(--accent-text);
   border-radius: 2px;
 }
 
@@ -698,7 +719,7 @@ img {
 }
 .nav-dropdown-item a:hover {
   background: var(--bg-card-hover);
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 /* Nav Controls */
@@ -724,8 +745,19 @@ img {
 }
 .icon-btn:hover {
   border-color: var(--accent);
-  color: var(--accent);
-  background: rgba(245, 158, 11, 0.08);
+  color: var(--accent-text);
+  background: rgba(var(--accent-rgb), 0.08);
+}
+
+/* Header controls share one height: theme toggle / RTL toggle / CTA */
+.nav-controls .icon-btn {
+  width: var(--header-control-h);
+  height: var(--header-control-h);
+}
+.nav-controls .btn {
+  height: var(--header-control-h);
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .mobile-toggle {
@@ -789,7 +821,7 @@ img {
 }
 .mobile-nav-link.active, .mobile-nav-link:hover {
   background: var(--bg-card);
-  color: var(--accent);
+  color: var(--accent-text);
   border-left-color: var(--accent);
 }
 [dir="rtl"] .mobile-nav-link.active, [dir="rtl"] .mobile-nav-link:hover {
@@ -815,12 +847,16 @@ img {
 }
 
 /* Page Hero Components */
+.hero > .container { width: 100%; }
 .hero {
   padding-top: 9.5rem;
   padding-bottom: 6rem;
   position: relative;
   overflow: hidden;
-  background: radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.12) 0%, transparent 60%),
+  min-height: min(88vh, 860px);
+  display: flex;
+  align-items: center;
+  background: radial-gradient(circle at 80% 20%, rgba(var(--accent-rgb), 0.12) 0%, transparent 60%),
               radial-gradient(circle at 10% 90%, rgba(194, 65, 12, 0.1) 0%, transparent 50%);
 }
 
@@ -884,6 +920,62 @@ img {
   right: -20px;
 }
 
+/* Photo heroes carry a hardcoded dark overlay (inline style) that ignores the
+   theme, so their text must stay light in BOTH modes. Targets only .hero
+   elements with an inline background — 404 / maintenance heroes have none and
+   correctly follow the theme. */
+.hero[style*="linear-gradient"] {
+  color: #fcfaf7;
+}
+.hero[style*="linear-gradient"] h1,
+.hero[style*="linear-gradient"] h2,
+.hero[style*="linear-gradient"] h3 {
+  color: #ffffff;
+}
+.hero[style*="linear-gradient"] p,
+.hero[style*="linear-gradient"] .text-muted,
+.hero[style*="linear-gradient"] .stat-label {
+  color: #d6d3d1;
+}
+.hero[style*="linear-gradient"] .stat-number {
+  color: #ffffff;
+}
+.hero[style*="linear-gradient"] .text-accent {
+  color: var(--gold-400) !important;
+}
+.hero[style*="linear-gradient"] .badge:not([class*="badge-"]) {
+  color: var(--gold-400);
+}
+/* Eyebrow/tagline (About hero uses .tagline, not .badge). Light mode's
+   --accent = #d97706 only reaches 4.29:1 on the dark overlay — fails AA for
+   1.1rem text. Pin to gold-400 (11.6:1) in both modes. */
+.hero[style*="linear-gradient"] .tagline {
+  color: var(--gold-400);
+}
+/* Secondary CTA: dark-mode text was flipping to near-black on the dark hero */
+.hero[style*="linear-gradient"] .btn-secondary {
+  color: #fcfaf7;
+  border-color: rgba(252, 250, 247, 0.45);
+}
+.hero[style*="linear-gradient"] .btn-secondary:hover {
+  color: var(--gold-400);
+  border-color: var(--gold-400);
+  background: rgba(var(--accent-rgb), 0.12);
+}
+/* Light mode: --text-main flips to #1c1917 (near-black), which is invisible on
+   the hero's hardcoded dark overlay. Pin it light regardless of theme so the
+   hero secondary CTA (e.g. "Order A Flight" on Home 2) always passes WCAG AA.
+   Specificity 0,4,0 — beats .btn-secondary (0,1,0) and any theme override. */
+[data-theme="light"] .hero[style*="linear-gradient"] .btn-secondary {
+  color: #fcfaf7;
+  border-color: rgba(252, 250, 247, 0.55);
+}
+[data-theme="light"] .hero[style*="linear-gradient"] .btn-secondary:hover {
+  color: var(--gold-400);
+  border-color: var(--gold-400);
+  background: rgba(var(--accent-rgb), 0.14);
+}
+
 /* Stats Counter Grid */
 .stats-grid {
   display: grid;
@@ -900,7 +992,7 @@ img {
 .stat-number {
   font-family: var(--font-display);
   font-size: 3rem;
-  color: var(--accent);
+  color: var(--accent-text);
   line-height: 1;
   margin-bottom: 0.4rem;
 }
@@ -969,7 +1061,7 @@ img {
   margin-bottom: 0.8rem;
   font-size: 0.82rem;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .beer-card-title {
@@ -999,7 +1091,7 @@ img {
 }
 .bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--amber-500), var(--copper-500));
+  background: linear-gradient(90deg, var(--accent), var(--copper-500));
   border-radius: 3px;
 }
 
@@ -1055,7 +1147,7 @@ img {
   top: 0;
   width: 44px;
   height: 44px;
-  background: linear-gradient(135deg, var(--amber-500), var(--copper-600));
+  background: linear-gradient(135deg, var(--accent), var(--copper-600));
   color: #0b0a09;
   font-family: var(--font-display);
   font-size: 1.3rem;
@@ -1111,7 +1203,7 @@ img {
   text-align: inherit;
 }
 .accordion-header:hover {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 .accordion-icon {
   font-size: 1.2rem;
@@ -1119,7 +1211,7 @@ img {
 }
 .accordion-item.active .accordion-icon {
   transform: rotate(180deg);
-  color: var(--accent);
+  color: var(--accent-text);
 }
 .accordion-content {
   max-height: 0;
@@ -1198,7 +1290,7 @@ textarea.form-control {
 }
 .pricing-card.popular {
   border-color: var(--accent);
-  background: radial-gradient(circle at top right, rgba(245, 158, 11, 0.1), var(--bg-card));
+  background: radial-gradient(circle at top right, rgba(var(--accent-rgb), 0.1), var(--bg-card));
   transform: scale(1.03);
 }
 /* Equal-height pricing / package cards + bottom-aligned CTA buttons */
@@ -1252,7 +1344,7 @@ textarea.form-control {
   position: absolute;
   top: -12px;
   right: 1.5rem;
-  background: linear-gradient(135deg, var(--amber-500), var(--copper-600));
+  background: linear-gradient(135deg, var(--accent), var(--copper-600));
   color: #0b0a09;
   font-size: 0.75rem;
   font-weight: 800;
@@ -1267,7 +1359,7 @@ textarea.form-control {
 .price-amount {
   font-family: var(--font-display);
   font-size: 3.2rem;
-  color: var(--accent);
+  color: var(--accent-text);
   line-height: 1;
   margin: 1.2rem 0;
 }
@@ -1292,7 +1384,7 @@ textarea.form-control {
 }
 .pricing-features li::before {
   content: '✓';
-  color: var(--accent);
+  color: var(--accent-text);
   font-weight: bold;
 }
 
@@ -1329,6 +1421,23 @@ textarea.form-control {
 [data-theme="light"] .footer-title {
   color: #ffffff;
 }
+/* The footer background is ALWAYS dark (#0b0a09 dark / #141210 light), so its
+   text must stay light in BOTH themes. Without these, light mode flips
+   p / .footer-links a / .social-btn to --text-muted #57534e = 2.45:1 on
+   #141210 — fails AA for text and 3:1 for the social icons. */
+[data-theme="light"] .footer p,
+[data-theme="light"] .footer .footer-links a,
+[data-theme="light"] .footer .social-btn {
+  color: #a8a29e;
+}
+[data-theme="light"] .footer .footer-links a:hover,
+[data-theme="light"] .footer .social-btn:hover {
+  color: var(--gold-400);
+}
+[data-theme="light"] .footer .footer-brand p,
+[data-theme="light"] .footer .footer-bottom p {
+  color: #a8a29e;
+}
 .footer-links {
   list-style: none;
   display: flex;
@@ -1361,7 +1470,7 @@ textarea.form-control {
 .social-btn:hover {
   color: var(--accent);
   border-color: var(--accent);
-  background: rgba(245, 158, 11, 0.08);
+  background: rgba(var(--accent-rgb), 0.08);
   transform: translateY(-2px);
 }
 .social-btn .icon {
@@ -1385,7 +1494,7 @@ textarea.form-control {
   right: 2rem;
   width: 44px;
   height: 44px;
-  background: linear-gradient(135deg, var(--amber-500), var(--copper-600));
+  background: linear-gradient(135deg, var(--accent), var(--copper-600));
   color: #0b0a09;
   border: none;
   border-radius: 50%;
@@ -1494,7 +1603,7 @@ h4 .icon {
   vertical-align: -0.12em;
 }
 .check-icon {
-  color: var(--accent);
+  color: var(--accent-text);
   margin-inline-end: 0.5rem;
 }
 .btn .icon {
@@ -1506,8 +1615,20 @@ h4 .icon {
   margin-inline-start: 0.35em;
 }
 
+/* Header spacing safety: keep logo / nav / controls from crowding 768–1200px */
+@media (max-width: 1200px) {
+  .nav-container { gap: 1rem; }
+  .nav-links { gap: 0.9rem; }
+  .nav-link { font-size: 0.82rem; }
+}
+
 /* Responsive Breakpoints — Home 1 + site-wide (320 / 360 / 480 / 760 / 1024) */
 @media (max-width: 1024px) {
+  /* 1024px: 7 desktop links + brand + controls + CTA overflow the flex row and
+     misalign the menu — switch to the hamburger drawer (which already carries
+     the Visit Taproom CTA) */
+  .nav-links, .nav-btn-desktop { display: none; }
+  .mobile-toggle { display: flex; }
   .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .hero-img-wrapper img { height: 380px; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1518,7 +1639,7 @@ h4 .icon {
 @media (max-width: 768px) {
   .nav-links, .nav-btn-desktop { display: none; }
   .mobile-toggle { display: flex; }
-  .hero { padding-top: 7.5rem; padding-bottom: 4rem; }
+  .hero { padding-top: 7.5rem; padding-bottom: 4rem; min-height: min(78vh, 640px); }
   .section { padding-top: 4rem; padding-bottom: 4rem; }
   .hero-img-wrapper img { height: 300px; }
   .hero-badge-floating { left: 0.75rem; right: 0.75rem; bottom: -18px; padding: 0.85rem 1rem; }
@@ -1544,7 +1665,7 @@ h4 .icon {
 @media (max-width: 480px) {
   .brand-tagline { font-size: 0.5rem; letter-spacing: 0.14em; }
   .container { padding-left: 1.1rem; padding-right: 1.1rem; }
-  .hero { padding-top: 7rem; }
+  .hero { padding-top: 7rem; min-height: min(74vh, 600px); }
   .hero-grid { gap: 2rem; }
   .section-header { margin-bottom: 2.5rem; }
   .hero-img-wrapper img { height: 240px; }
@@ -1569,10 +1690,11 @@ h4 .icon {
   .brand-icon { width: 32px; height: 32px; }
   .brand-icon svg { width: 20px; height: 20px; }
   .nav-controls { gap: 0.5rem; }
+  :root { --header-control-h: 34px; }
   .icon-btn { width: 34px; height: 34px; }
   .rtl-toggle { font-size: 0.7rem; }
   .section { padding-top: 3.25rem; padding-bottom: 3.25rem; }
-  .hero { padding-top: 6.5rem; }
+  .hero { padding-top: 6.5rem; min-height: min(72vh, 560px); }
   h1, .h1 { font-size: 2.2rem; }
   .hero-content p { font-size: 1rem; }
   .hero-img-wrapper img { height: 200px; }
@@ -1595,3 +1717,14 @@ h4 .icon {
   .btn { white-space: normal; text-align: center; }
   .footer-grid { gap: 1.5rem; }
 }
+
+/* Light-mode cascade: always-dark surfaces keep the bright primary */
+[data-theme="light"] .hero[style*="linear-gradient"] { --accent-text: var(--gold-400); --link-hover: var(--gold-400); }
+[data-theme="light"] #brewing-process { --accent-text: var(--amber-500); --link-hover: var(--gold-400); }
+[data-theme="light"] .footer { --accent-text: var(--gold-400); --link-hover: var(--gold-400); }
+[data-theme="light"] .footer-bottom p a { color: #a8a29e; }
+[data-theme="light"] .footer-bottom p a:hover { color: var(--gold-400); }
+/* Hamburger drawer (360/768/1024): links after Contact Us are replaced
+   by a single full-width primary CTA button */
+.mobile-nav-links .mobile-nav-cta { padding-top: 0.75rem; }
+.mobile-nav-links .mobile-nav-cta .btn { display: block; width: 100%; text-align: center; }
